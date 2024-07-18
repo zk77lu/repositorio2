@@ -1,0 +1,76 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre a Loja</title>
+    <link rel="stylesheet" href="{% static 'styles/pag1.css' %}">
+    <script src="{% static 'script/script.js' %}"></script>
+    <style>
+        /* infos da loja */
+.divInfo4pag{
+  width: 100%;
+  height: auto;
+  
+
+}
+.txth1Info4pag{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 15px;
+  text-align: center;
+}
+.txtP4pag{
+    font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 14px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+
+}
+.bttInfo4pag{
+    background-color: rgb(57, 57, 247);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border: none;
+    border-radius: 16px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    
+
+}
+.dvBtt4pag{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="divInfo4pag">
+        <h1 class="txth1Info4pag">SOBRE A LOJA</h1>
+        <p class="txtP4pag">Aqui oferecemos uma seleção exclusiva de iPhones, Xiaomi, notebooks e diversos outros produtos de alta qualidade. Nosso compromisso é trazer o melhor da tecnologia e inovação global para você, com preços competitivos e um atendimento diferenciado. <br>
+            Realizamos vendas tanto pelo Instagram quanto pelo nosso site, proporcionando a você uma experiência de compra fácil e conveniente. Navegue por nossa variedade de produtos, acompanhe nossas ofertas e novidades, e encontre exatamente o que você precisa. Estamos aqui para transformar sua experiência de compra em algo excepcional. <br>
+            Sinta-se à vontade para explorar e entre em contato conosco para qualquer dúvida ou necessidade. Boas compras!
+
+        </p>
+        <div class="dvBtt4pag"><button onclick="voltar()" class="bttInfo4pag">VOLTAR</button></div>
+        <script>
+            function voltar(){
+                
+                history.back();
+
+            }
+        </script>
+
+    </div>
+</body>
+</html>

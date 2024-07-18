@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troca e devolução</title>
+    <link rel="stylesheet" href="{% static 'styles/pag1.css' %}">
+    <script src="{% static 'script/script.js' %}"></script>
+    <style>
+        /* infos da loja */
+.divInfo4pag{
+  width: 100%;
+  height: auto;
+  
+
+}
+.txth1Info4pag{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 15px;
+  text-align: center;
+}
+.txtP4pag{
+    font-family: Arial, Helvetica, sans-serif;
+  color: #000;
+  font-size: 14px;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+
+}
+.bttInfo4pag{
+    background-color: rgb(57, 57, 247);
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    border: none;
+    border-radius: 16px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    
+
+}
+.dvBtt4pag{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="divInfo4pag">
+        <h1 class="txth1Info4pag">TROCA E DEVOLUÇÕES</h1>
+        <p class="txtP4pag">
+            Nossa prioridade é a sua satisfação completa. Se você não estiver completamente satisfeito com sua compra, estamos aqui para ajudar. <br>
+            Aceitamos trocas de produtos dentro de 5 dias a partir da data de recebimento. Para ser elegível para troca, o produto deve estar na mesma condição em que você o recebeu, sem uso e na embalagem original. Por favor, entre em contato conosco para obter instruções detalhadas sobre como proceder com a troca. <br>
+            Se por algum motivo você desejar devolver um produto, você pode fazê-lo dentro de 5 dias a partir da data de recebimento. O produto deve estar na mesma condição em que você o recebeu, sem uso e na embalagem original. Após a inspeção do produto, processaremos o reembolso conforme a forma de pagamento original. <br>
+            Algumas exceções podem se aplicar a determinados produtos. Entre em contato conosco para obter informações específicas sobre produtos não elegíveis para troca ou devolução. <br>
+            
+Estamos aqui para ajudar! Se você tiver alguma dúvida sobre nossa política de trocas e devoluções ou precisar de assistência adicional, não hesite em entrar em contato conosco através do nosso canal de atendimento ao consumidor. Nossa equipe de atendimento ao cliente terá prazer em ajudar você.
+
+
+
+
+
+
+
+        </p>
+        <div class="dvBtt4pag"><button onclick="voltar()" class="bttInfo4pag">VOLTAR</button></div>
+        <script>
+            function voltar(){
+                
+                history.back();
+
+            }
+        </script>
+    </div>
+    
+</body>
+</html>

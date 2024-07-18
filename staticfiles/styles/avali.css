@@ -1,0 +1,103 @@
+.estrelas input[type=radio] {
+    display: none;
+  }
+  .estrelas label i.fa{
+    font-size: 2.5em
+  }
+  .estrelas label i.fa:before {
+    content:'\f005';
+    color: #FC0;
+  }
+  .estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: #CCC;
+  }
+  .estrelas{
+    text-align: center;
+  }
+  .TxTdaNota{
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-size: 13px;
+ color: rgb(46, 45, 45);
+ font-weight: 400;
+ text-align: center;
+  }
+  .dv_imputAvali{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    
+
+  }
+  .inputAvaliD_user{
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ color: #000;
+ font-weight: 400;
+ padding-left: 10px;
+ font-size: 15px;
+ width: 60%;
+ border: 1px solid #000;
+ height: 30px;
+ border-radius: 5px;
+ margin-bottom: 5px;
+ margin-left: 10px;
+  }
+  .inputAvaliD_user::placeholder{
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 15px;
+   font-weight: 400;
+   
+
+  }
+  .inputAvaliD_user:focus{
+    outline: none;
+    border: 1px solid rgb(3, 179, 3);
+  }
+  .buttoFinaly{
+     background-color: rgb(29, 29, 248);
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+     color: white;
+     font-size: 15px;
+     border-radius: 5px; 
+     padding: 10px;
+     border: none;
+     width: 100px;
+     margin-top: 5px;
+     font-weight: 600;
+     margin-left: 10px;
+
+  }
+  .msg_obrigado{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    width: 100%;
+    height: 40px;
+    background: rgb(4, 170, 4);
+    text-align: center;
+    align-items: center;
+    margin-top: 70px;
+    padding-top: 10px;
+    display: none;
+  }
+  .dv_dvOcultSAIR{
+    position: absolute;
+    margin: 0;
+    padding: 5px;
+    border-radius: 5px;
+    border-bottom:  2px solid #000;
+    border-right:  2px solid #000;
+    color: #000;
+    background-color: rgb(245, 244, 244);
+    font-size: 13px;
+    font-weight: 500;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  }
+  .teste{
+    width: 100%;
+    height: 100px;
+    background-color: red;
+  }

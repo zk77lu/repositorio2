@@ -1,0 +1,70 @@
+.swiper-container {
+  width: 100%;
+  height: auto;
+  background-color:rgb(255, 255, 255);
+  overflow: hidden;
+  transition: 1s;
+}
+
+.swiper-slide img {
+  width: 85%;
+  height: auto;
+  object-fit: cover;
+}
+
+.slide-info {
+  color: rgb(231, 62, 62);
+  font-size: 18px;
+  position: absolute;
+  right: 24px;
+  background-color: rgb(153, 153, 153);
+  color: rgb(254, 254, 254);
+  border-radius: 6px;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  margin-top: -14px;
+  opacity: 0.85;
+  z-index: 1;
+}
+
+.swiper-container {
+  margin-top: 12px;
+  text-align: center;
+}
+
+.miniatura {
+  width: 50px; /* Tamanho fixo das miniaturas */
+  height: auto; /* Tamanho fixo das miniaturas */
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.miniatura img {
+  width: 50px;
+  height: auto;
+  object-fit: cover;
+}
+
+.miniatura.selecionada {
+  border: 2px solid black; 
+  border-radius: 5px;
+}
+
+.miniaturas-container {
+  overflow-x: auto; 
+  display: flex;
+  margin-top: 12px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  
+  
+}
+
+.miniaturas-container::-webkit-scrollbar {
+  display: none;
+}

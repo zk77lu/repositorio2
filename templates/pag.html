@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Produto</title>
+</head>
+<body>
+    {% if ipv6 %}
+        <h1>Detalhes da Localização</h1>
+        <p>País: {{ ipv6.data.region }}</p>
+        <p>Cidade: {{ ipv6.data.city }}</p>
+        <!-- Adicione mais campos conforme necessário -->
+    {% else %}
+        <p>Informações de localização não disponíveis.</p>
+    {% endif %}
+    
+    
+</body>
+</html>

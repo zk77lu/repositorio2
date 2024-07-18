@@ -1,0 +1,1606 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+
+    
+    
+    
+}
+a{
+  text-decoration: none;
+  
+}
+
+.headerLoc{
+    width: 100%;
+    height: 35px;
+    background-color:#333 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.simboLoc{
+    fill: white;
+    width: 16px;
+    height: 16px;
+    
+}
+#proc_city{
+    font-weight: 700;
+    font-style: italic;
+}
+.txt_loc_header{
+    font-family: Roboto, sans-serif;
+    color: white;
+    font-size: 12px;
+    font-weight: 400;
+    margin-left: 5px;
+    
+}
+
+.headerNav{
+    background-color: #000;
+    width: 100%;
+    height: auto;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.divBuscador{
+    display: flex;
+    width: 90%;
+    border-radius: 5px;
+    background-color: white;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.lupaNav{
+    margin-right: 10px;
+    
+}
+.txt_buscador{
+    font-size: 16px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: #000;
+    margin-left: 10px;
+    border: none;
+    background-color: white;
+}
+.conteinerSacMenu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    align-items: center;
+    margin-top: 20px;
+
+}
+.iconeSac{
+    fill:white;
+    
+
+    
+
+}
+.logoLoja{
+    width: auto;
+    height: 50px;
+
+}
+.menuNav{
+    width: 20px;
+    height: 18px;
+    margin-left: 5%;
+    
+    
+
+}
+.pri_marcas{
+    font-size: 8px;
+    font-family: Roboto, sans-serif;
+    color: #414040;
+    font-weight: 700;
+    
+}
+.divMarcas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.Dmarcas{
+    display: flex;
+    padding: 0;
+
+}
+.imgs_marcas{
+    height: 12px;
+    width: auto;
+    margin-left: 10px;
+}
+.dvRedond{
+    width: auto;
+    height: auto;
+    margin-right: 5%;
+
+}
+.dvSpan{
+    background-color: green;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    margin-top: -3px;
+
+}
+
+.totCarrinho{
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+   
+}
+.x{
+    width: 25px;
+    height: 20px;
+    fill: white;
+    position: absolute;
+    margin-left: 5%;
+    background-color: #000;
+    z-index: -1;
+    
+    
+    
+
+    
+}
+.dvInfosMenu{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    display: none;
+    z-index: 3;
+}
+.dvTRi{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    position: absolute;
+    transform: rotate(45deg);
+    top: -5px;
+    left: 18px;
+    
+ }
+ .links_a{
+    text-decoration: none;
+    font-family: Roboto, sans-serif;
+    color: #262626;
+    font-weight: 400;
+    margin-bottom: 10px;
+ }
+ .uls{
+    list-style-type: none;
+    padding-left: 20px;
+    
+ }
+ .lis{
+    /* margin-top: 30px; */
+    margin-bottom: 10px;
+ }
+ .lis1{
+  margin-top: 30px;
+ }
+ hr{
+    border-width: 0.4px;
+    border-color: rgba(122, 120, 120, 0.137);
+    margin-top: 50px;
+    margin-bottom: 20px;
+
+ }
+ .hr_hr2{
+    border-width: 0.4px;
+    border-color: rgba(122, 120, 120, 0.137);
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+ }
+
+ .ajud{
+    font-family: Roboto, sans-serif;
+    color: #262626;
+    font-size: 13px;
+    margin-left: 20px;
+
+ }
+ .dvContat{
+    display: flex;
+ }
+ .icon--bi-phone{
+    width: 25px;
+    height: auto;
+    margin-left: 20px;
+ }
+ .txt_contat{
+    font-family: Roboto, sans-serif;
+    color: #262626;
+    font-size: 16px;
+    margin-left: 10px;
+    font-weight: 400;
+ }
+
+ /* slide fotos */
+ .carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slide {
+    display: none;
+    /* opacity: 0; */
+  transition: left 0.9s ease;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* style pesquisar e mostrar produtos */
+  .section_pesq_mostrarProd{
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    position: absolute;
+    z-index:2;
+    top: 0;
+    display: none;
+    
+    
+  }
+  
+  .dv_input{
+    width: 100%;
+    background-color: #c7c7c5;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+   
+
+  }
+  .dv_input2Element{
+    padding: 0;
+    display: flex;
+    margin-left: 20px;
+   
+
+  }
+  #inputProduct{
+    width: 60%;
+    height: auto;
+    padding-left: 15px;
+    text-decoration: none;
+    border: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: #00b32d;
+    font-family: Roboto, sans-serif ;
+    font-size: 15px;
+    height: 40px;
+    
+
+
+  }
+  #inputProduct:focus{
+    outline: none;
+  }
+  #inputProduct::placeholder{
+    font-family: Roboto, sans-serif ;
+    font-size: 15px;
+    color: #000;
+  }
+  .dv_lupaPesquisar{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: auto;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+
+
+  }
+  .lupaPesquisar{
+    width: 20px;
+    fill: #00b32d;
+    height: auto;
+  }
+  .txt_fechar{
+    font-family:  Roboto, sans-serif;
+    color: #000000;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+    height: auto;
+    width: 50px;
+    margin-left: 10px;
+    
+    
+    
+  }
+  /* header */
+ .head_infos{
+  width: 100%;
+  height: auto;
+  background-color: #f2f1e9;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 50px;
+ }
+ .dv_head_icon{
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+
+ }
+ .dv_head_2Elements{
+  width: auto;
+  height: auto;
+  
+
+ }
+ .txt_title_head{
+  font-size: 17px;
+  font-weight: 500;
+  color: #000;
+  font-family:  Roboto, sans-serif;
+  margin: 0;
+  margin-bottom: 10px;
+
+ }
+ .txt_head_desc{
+  font-family:  Roboto, sans-serif;
+  font-size: 16px;
+  color: #333d4c;
+  line-height: 1.2;
+  margin: 0;
+  margin-right: 30px;
+
+ }
+ .lis{
+  display: flex;
+ }
+ .CorIcons{
+  fill: #9e9e9d;
+ }
+ /* ........... */
+ .contInfosFinaly{
+  background-color: #333d4c;
+  width: 100%;
+  height:auto;
+  padding-bottom: 30px;
+  margin-top: 20px;
+  
+ }
+ .buttonInfos{
+  text-decoration: none;
+  border: none;
+  display: flex;
+  width: 100%;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  justify-content: space-between;
+  background-color: #333d4c;
+  color: white;
+  padding: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  
+
+ }
+
+       /* .... */
+       .x_{
+        width: 10px;
+        height: 10px;
+        
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .X_mais{
+        background-color: white;
+        width: 10px;
+        height: 2px;
+        border-radius: 2px;
+      }
+      .X_menos{
+        background-color: rgb(243, 243, 243);
+        width: 2px;
+        height: 10px;
+        position: absolute;
+        transform: rotate(180deg);
+        transition: 0.3s;
+        border-radius: 2px;
+        
+
+        
+      }
+.dv_expand{
+  width: 100%;
+  height: 35px;
+  overflow: hidden;
+  
+  transition: 1s;
+ 
+  
+  
+
+}
+
+.hr_hr{
+  border-color: white;
+  margin-top: 0;
+  width: 96%;
+  
+}
+.desc_descFinaly{
+  font-family: Roboto, sans-serif;
+  font-size: 10pt;
+  color: white;
+  margin: 50px 20px 40px 20px;
+  text-align: center;
+}
+.desc_descFinaly2{
+  font-family: Roboto, sans-serif;
+  font-size: 10pt;
+  color: white;
+  margin: 60px 20px 0px 20px;
+  
+}
+.icons_payment{
+  display: flex;
+  padding: 0px 20px 0px 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+
+
+}
+.payment-list__item{
+  margin-right: 10px;
+  margin-top: 10px;
+  
+}
+.lis_infos_finaly{
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  color: white;
+  line-height: 2;
+  text-decoration: none
+  
+}
+
+.ulLi{
+  list-style-type: none;
+  padding-left: 20px;
+  height: auto;
+  
+  
+  
+  
+  
+  
+}
+
+
+.txt_txtFinaly{
+  font-family: Roboto, sans-serif;
+  color: white;
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 15px;
+  
+
+}
+.imgFinaly{
+  margin-top: 30px;
+  margin-left: 20px;
+  height: 50px;
+  width: auto;
+}
+
+.contact{
+  font-weight: 400;
+  font-family: Roboto, sans-serif;
+  color: #000;
+  text-align: center;
+
+}
+
+.respostSucess{
+  font-family: Roboto, sans-serif;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  
+  color: #00b32d;
+  background-color: rgba(0, 179, 45, 0.11);
+  padding: 20px 10px 20px 10px;
+  
+}
+
+.inputContat::placeholder{
+  color: #000;
+  font-family: Roboto, sans-serif;
+
+
+
+}
+.inputContat{
+  border-radius: 10px;
+  width: 80%;
+  height: 50px;
+  margin-top: 10px;
+  padding-left: 10px;
+  border: 1px solid rgb(122, 121, 121);
+}
+.inputContat:focus{
+  border-color: #000;
+}
+.formInput{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputSubmit{
+  padding: 10px;
+  margin-left: 40px;
+  margin-top: 10px;
+  border-radius: 10px;
+  background-color: green;
+  color: white;
+  margin-bottom: 30px;
+  font-weight: 600;
+  border: none;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.mMude{
+  width: 100%;
+  
+}
+
+#msg{
+  display: none;
+}
+
+.txtSacola{
+  font-family: Roboto, sans-serif;
+  font-size: 19px;
+  color: #000;
+  font-weight: 500;
+
+
+}
+.dv_sacola{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+.A_sacola{
+  text-decoration: none;
+  background-color: rgb(8, 165, 8);
+  color: white;
+  font-weight: 600;
+  font-family: Roboto, sans-serif;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 50px;
+
+
+}
+/* styles page product */
+.title_product{
+  width: 100%;
+  
+
+  
+}
+.txtTitle{
+  
+  font-family: Roboto, sans-serif;
+  font-size: 22px;
+  
+  margin-left: 20px;
+  margin-right: 20px;
+  font-weight:500;
+  line-height: 1.45;
+  
+  
+  color: #000;
+
+}
+
+.dv_estrelas{
+  display: flex;
+  align-items: center;
+  width: auto;
+  
+  height: auto;
+}
+.dv_avali{
+  display: flex;
+  margin-top: -10px;
+  padding-left: 17px;
+  height: auto;
+  align-items: center;
+  
+  
+  
+  
+  
+  
+}
+.imgEstrela{
+  width: 20px;
+  height: 20px;
+  margin-left: 4px;
+}
+.txtComent{
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  text-align: center;
+  border: none;
+  font-weight: 400;
+  padding: 0;
+  margin-left: 10px;
+  
+
+
+}
+.dec_exclu{
+  display: flex;
+  margin-left: 20px;
+}
+.dec_txt1{
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  color: #000;
+  font-weight: 400;
+
+
+
+}
+.dec_txt2{
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  background-color: #ac9e92;
+  border-radius: 3px;
+  padding: 3px 3px 2px 3px;
+  margin-left: 3px;
+  
+
+
+
+}
+.prace_orig{
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  color:#000000;
+  font-weight: 400;
+  margin-left: 20px;
+  text-decoration: line-through;
+
+}
+.por{
+  font-size: 20px;
+  font-family: Roboto, sans-serif;
+  color: #666;
+  margin-left: 20px;
+  margin-right: 10px;
+  font-weight: 400;
+  
+
+
+}
+.prace_aplic_desc{
+  font-family: Roboto, sans-serif;
+  font-size: 30px;
+  color: #000;
+  
+  font-weight: 500;
+
+}
+.x_prace{
+  font-size: 17px;
+  color: #000;
+  margin: 0;
+  font-family: Roboto, sans-serif;
+  margin-top: 3px;
+
+}
+.formsPag{
+  font-size: 13px;
+  font-family: Roboto, sans-serif;
+  color: #000;
+  text-decoration: underline;
+  margin: 0;
+  
+
+
+
+}
+.simboPag{
+  width: 45px;
+  height: auto;
+  margin-left: 20px;
+}
+  
+.dv_super_formsPag{
+  height: 60px;
+  overflow: hidden;
+  
+  
+  
+  
+}
+.conteiner_formsPag{
+  height: auto;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  background-color: rgb(230, 229, 229);
+  border-radius: 10px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 10px 30px -10px #000;
+  
+}
+
+
+.ul_paymentCont{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  padding-left: 10px;
+  
+}
+.lis_paymentCont{
+  width: 45%;
+  height: auto;
+  font-size: 12px;
+  font-weight: 400;
+  list-style-type: none;
+  font-family: Roboto, sans-serif;
+  color: #000;
+  line-height: 1.6;
+  
+
+
+}
+.porcenDesc{
+  background-color: #f6f6f6;
+  font-family: Roboto, sans-serif;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding:10px 20px 10px 20px ;
+  width: 270px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+.txtDesPorce{
+  font-size: 17px;
+  font-weight: 400;
+  color: #000;
+  margin: 0;
+}
+#id_prctagem{
+  background-color: #00b32d;
+  color: #fff;
+  font-size: 9px;
+  font-weight: 400;
+  padding: 2px 5px 2px 5px;
+  
+
+}
+.txtEconom{
+  font-size: 13px;
+  font-weight: 400;
+  color: #000000;
+  margin: 0;
+  
+
+}
+.iconGreePix{
+  width: 27px;
+  height: 27px;
+  fill: #00b32d;
+  margin-right: 10px;
+}
+.buttPagar{
+  background-color: #00b32d;
+  width: 90%;
+  height: 52px;
+  border-radius: 10px;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  font-family: Roboto, sans-serif;
+  font-weight: 600;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  margin-top: 20px;
+  color: #fff;
+
+}
+.imgCompre{
+  width: 17px;
+  margin-right: 5px;
+  margin-top: -3px;
+  height: 17px;
+}
+.dv_fretPraz{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 10px 30px -10px #0000002e;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.p_fretCalc{
+  margin: 0;
+  font-size: 13px;
+  color: #000;
+  font-weight: 400;
+  font-family: Roboto, sans-serif;
+  line-height: 1.3;
+  margin-left: 5px;
+}
+.calTotFrte{
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 30px;
+  padding-bottom: 10px;
+  box-shadow: 0px 5px 20px #0000002e;
+  margin-bottom: 30px;
+
+
+}
+.twoElement{
+  display: flex;
+  
+}
+.txtCalFretCal{
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Roboto, sans-serif;
+  color: #000;
+  margin-top: 13px;
+  margin-left: 10px;
+
+}
+.iconCamin{
+  width: 30px;
+  margin-left: 20px;
+  height: 30px;
+}
+.pesqFret{
+height: 36px;
+width: 150px;
+border: none;
+padding-left: 5px;
+padding-top: 5px;
+color: #0a0a0a;
+  font-size: 16px;
+  font-weight: 400;
+font-family: Roboto, sans-serif;
+
+}
+.pesqFret:focus{
+  outline: none;
+}
+.pesqFret::placeholder{
+  font-family: Roboto, sans-serif;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  
+  
+}
+.dvInputPesq{
+  width: 210px;
+  box-shadow: #8080801a 0 3px 5px;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-left: 20px;
+  margin-top: 12px;
+  border: 1px solid #eaeaea;
+  margin-bottom: 20px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-right: 3px;
+  
+
+}
+
+/* styles infosProdutos,ficha tecnica,avaliação */
+.conteir_3estrutu{
+  padding-top: 30px;
+  background-color: rgb(241, 241, 241);
+  height: auto;
+  width: 100%;
+  padding-bottom: 30px;
+}
+.estru1{
+  border-radius: 16px;
+  width: 95%;
+  height: 55px;
+  transition: 1s;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  margin-bottom: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 10px -5px;
+  position: relative;
+  overflow: hidden;
+  
+
+}
+
+
+.estru2_txt_svg{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+
+}
+
+
+.txtH2{
+  color: rgb(102, 102, 102);
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Roboto, sans-serif;
+  margin-left: 15px;
+
+}
+.setinha{
+  fill: rgb(102, 102, 102);
+  width: 12px;
+  height: 12px;
+  margin-right: 25px;
+}
+.expanded {
+  height: auto !important;
+}
+
+.dv_buttomAbrirFechar{
+  position: absolute;
+  bottom: 0;
+  box-shadow: rgb(255, 255, 255) 0px -22px 15px -5px;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-top: 0;
+}
+.buttomAbriFechar_{
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  color: #000;
+  font: 500;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 50px 10px 50px;
+  border: none;
+  border: 1px solid #000;
+
+}
+.dv_hiddem_img {
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  
+  
+
+}
+
+.tes {
+  width: 90%;
+  height: auto;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.box{
+  position: absolute;
+  background-color: #fff;
+  box-shadow: rgb(255, 255, 255) 0px -22px 30px 50px;
+  
+
+  height: 5px;
+  width: 100%;
+  
+  
+}
+#dv_recb_descPro{
+  width: 100%;
+  height: auto;
+  
+  margin-bottom: 70px;
+  margin-top: 30px;
+  
+}
+.title_descPro{
+    
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  margin: 0px 10px 0px 20px;
+  
+  
+  font-weight:500;
+  line-height: 1.45;
+  
+  
+  color: #000;
+}
+.p_descProTT{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(102, 102, 102);
+  font-size: 16px;
+  margin: 10px 20px 0px 20px;
+
+}
+
+.sty_td{
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+  color: rgb(102, 102, 102);
+  
+  font-weight: 400;
+  
+  padding: 10px;
+  
+
+max-width: 200px;
+ word-wrap: break-word;
+ white-space: pre-wrap;
+  
+}
+.table_sty{
+  
+    width: 90%;
+    margin-bottom: 20px;
+    
+ 
+}
+
+.dv_sty_table{
+  display: flex;
+  justify-content: center;
+}
+.corTd1{
+  background-color: rgb(230, 230, 230);
+
+}
+.corTd2{
+  background-color: rgb(250, 250, 250);
+  }
+.hr_fichTec{
+    border-width: 0.4px;
+    border-color: rgba(122, 120, 120, 0.137);
+    margin-bottom: 10px;
+    width: 95%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+} 
+.dv_nota{
+  width: 90%;
+  height: 160px;
+  border: 1px solid rgba(122, 120, 120, 0.137);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+.pTXT_nota{
+  color: rgb(87, 87, 87);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  width: auto;
+  
+  background-color: rgb(250, 250, 250);
+  height: 20px;
+  margin-top: 0;
+  padding-top: 5px;
+  padding-left: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+
+
+}
+.txt_p_totAvali{
+  color: rgb(40, 40, 40);
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+.dv_iconsStar{
+  display: flex;
+  width: auto;
+  height: auto;
+  margin-left: 20px;
+  gap: 5px;
+  
+
+  
+}
+.avali_starTS{
+  display: flex;
+  margin-top: 10px;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+
+  
+}
+.imgCVGstarNota{
+  width: 20px;
+  height: 20px;
+}
+.buttom_avali{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+  background-color: #000;
+  border: none;
+  border-radius: 8px;
+  width: 80%;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+
+}
+.dv_comentsUser{
+  width: 100%;
+  height: auto;
+  
+  margin-top: 25px;
+  padding-bottom: 70px;
+}
+.dv_sessaoUser{
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  
+}
+.dv_iconNamStar{
+  width: 100%;
+  height: auto;
+  
+  display: flex;
+  align-items: center;
+}
+.img_iconUser{
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+.txt_nameUser{
+  color: rgb(74, 74, 74);
+  font-weight: 400;
+  font-size: 16px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  margin-left: 10px;
+
+
+}
+.dvFlex_starTs{
+  margin-left: 10px;
+  display: flex;
+  width: auto;
+  height: auto;
+  gap: 5px;
+}
+.starS_contUser{
+  width: 15px;
+  height: 15px;
+}
+.txtDesc_user{
+  
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: rgb(74, 74, 74);
+  font-weight: 400;
+  font-size: 18px;
+  margin-left: 10px;
+  margin-top: 15px;
+  
+
+}
+.txt_dateComent{
+ color: rgba(105, 114, 119, 0.39);
+ font-weight: 400;
+ font-size: 16px;
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ padding: 10px;
+ 
+}
+.dvOcult{
+  position: absolute;
+  background-color: #fff;
+  height: 100%;
+  top: 0;
+  width: 100%;
+  display: none;
+  z-index: 3;
+  
+  
+}
+
+/* Mostrar produtos ao pesquisar */
+.dvPrincMostPrdts{
+  margin-top: 20px;
+
+}
+
+.sessCadMostProdut{
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+  margin-top: 20px;
+
+
+}
+
+.mostIMG_produtPesq{
+width: 50px;
+height: auto;
+}
+
+.divPesqProdut2Txt{
+  width: 100%;
+  height: auto;
+  margin-left: 10px;
+  
+  
+
+}
+
+.mostPesqNomProdut{
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-size: 15px;
+ color: #000;
+ font-weight: 400;
+ margin: 0;
+
+
+}
+
+.mostPesqPrecProdut{
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ font-size: 14px;
+ color: #000;
+ margin: 0;
+ margin-top: 5px;
+
+
+
+}
+
+.highlight {
+  color: green;
+}
+.linkProdut{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.divInfosD_cep{
+  
+  width: 100%;
+  height: auto;
+  
+}
+.styInfosCep{
+ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+ color: #000;
+ font-size: 14px;
+ 
+
+}
+.loc_Info{
+  display: flex;
+  padding-left: 20px;
+}
+.imgLocInfoCep{
+  width: 20px;
+  height: auto;
+  fill:rgb(0, 134, 255)
+}
+.carEntreg{
+  fill: rgb(153, 153, 153);
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+}
+.divCarEntreg{
+  display: flex;
+  padding-left: 20px;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.fretREceb{
+  color: rgb(64, 64, 64);
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  margin: 0;
+  
+  
+}
+.txtFretGrat{
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  color: #068d28;
+  margin-right: 30px;
+  
+  
+
+
+}
+.buttomOK{
+  background-color: green;
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  width: 40px;
+  height: 40px;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  
+
+}
+
+
+/* de index mostrar produtos */
+.visuProductsHorizont{
+  display: flex;
+  overflow-x: auto;
+  
+ 
+
+}
+.visuProductsHorizont::-webkit-scrollbar{
+  display: none;
+}
+
+.sessProductsInfos{
+  min-width: 160px;
+  max-width: 160px;
+  height: 350px;
+  border-radius: 10px;
+  background-color: white;
+  margin-left: 20px;
+}
+.dvDimg{
+  
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+.imgProductIndex{
+  width: 90%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.hr_productIndex{
+  border-width: 0.3px;
+  border-color: rgba(122, 120, 120, 0.137);
+  margin: 0;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+.h3TxtProductIndex{
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 12px;
+        font-weight: 600;
+        line-height: 14px;
+        color: rgb(51, 51, 51);
+        font-family: Helvetica, Arial, sans-serif;
+        margin-left: 10px;
+        margin-right: 10px;
+}
+.dvStarProductIndex{
+  display: flex;
+  margin-left: 7px;
+}
+.starConteinrProduct{
+  height: 13px;
+  margin-left: 3px;
+  width: 13px;
+}
+.txtPontAvali_index{
+  color: rgb(153, 153, 153);
+  font-weight: 300;
+  font-size: 12px;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  margin-left: 10px;
+
+
+}
+.txtPrecOriProducIndex{
+  color: rgb(102, 102, 102);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-decoration: line-through;
+  margin: 0;
+  
+  
+}
+.dvTxt_eDesc{
+  display: flex;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+.dvDescGree{
+  width: 38px;
+  height: 16px;
+  background-color: rgb(7, 170, 7);
+  border-radius: 16px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  
+  
+
+  
+}
+.imgSvgSet{
+  width: 8px;
+  height: 8px;
+  margin-left: 3px;
+}
+
+.descProductIndex{
+  font-size: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin-left: 3px;
+
+}
+.precAtuIndex{
+  color: rgb(51, 51, 51);
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-left: 10px;
+  margin-top: 0;
+
+}
+/* title product */
+.titleSessProductIndex{
+  color: rgb(102, 102, 102);
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Helvetica, Arial, sans-serif;
+  margin-left: 20px;
+}
+
+
+/* Gree descont pag product */
+.greeDescontProduct{
+  width: 35px;
+  height: 17px;
+  border-radius: 16px;
+  background-color: rgb(7, 170, 7);
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+}
+.divD_greeDescont{
+  display: flex;
+  align-items: center;
+}
+.setGreePagProduct{
+  height: 8px;
+  width: auto;
+  margin-left: 3px;
+}
+.greeValueDescont{
+  font-size: 10px;
+  font-family: Helvetica, Arial, sans-serif;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin-left: 3px;
+}
+.bannerFund{
+  width: 100%;
+  height: auto;
+  margin-bottom: 100px;
+  margin-top: 30px;
+}
+
+
+.imgCronometro{
+  width: 30px;
+  height: auto;
+}
