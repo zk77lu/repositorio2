@@ -1,1 +1,1 @@
-web:gunicorn app:app
+web: gunicorn loja.wsgi:application
