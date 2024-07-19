@@ -300,6 +300,6 @@ urlpatterns = [
     # path('sobre/',sobre_loja ,name='sobre_loja' ),
     # path('privacidade/',poli_privac ,name='poli_privac' ),
     # path('entrega/',poli_entreg ,name='poli_entreg'),
-    path('devolucao/',troc_devolu ,name='troc_devolu')
+    path('',troc_devolu ,name='troc_devolu')
 ]
 
