@@ -293,6 +293,7 @@ def troc_devolu(request):
 
 
 urlpatterns = [
+
     path('produto/<int:produto_id>/', produto_detalhes, name='produto_detalhes'),
     path( '', pag_index ,name='pag_index'),
     path('sacola/', pag_sacola ,name='sacola'),
@@ -301,5 +302,7 @@ urlpatterns = [
     path('privacidade/',poli_privac ,name='poli_privac' ),
     path('entrega/',poli_entreg ,name='poli_entreg'),
     path('devolucao/',troc_devolu ,name='troc_devolu')
+
+   
 ]
 
