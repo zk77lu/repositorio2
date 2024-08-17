@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Troca de slide a cada 3 segundos (3000ms)
     setInterval(nextSlide, 5000);
   });
+
+  
   
 //   area de pesquisa de produtos
 function abrirPesq(){
@@ -257,16 +259,41 @@ function fcDvOcul(){
   
 }
 
-// Infos de loja
+// Infos de loja ##ok
+var linkDpayment= 'https://trocarPorLinkPagamento'
+
 var infoNumero='Esperando numero'
 
 var infoEmail='Esperando email'
 
 var nameD_loja='nameLoja'
 
+var linkZap = 'https://amazon.com'
+var linkInsta = 'https://amazon.com'
+
 var infoEmpresaRodape= nameD_loja + " Informaçoes da pagina da loja"
+// ########################################
 
 document.addEventListener('DOMContentLoaded', function() {
+  var busLinkPayment356=document.getElementById('linkPag356j')
+  if(busLinkPayment356){
+    window.location.href=linkDpayment
+  }
+  
+  if (document.title === 'loja') {
+    
+    document.title = nameD_loja;
+}
+// link redes sociais
+var aLinkZap = document.getElementById('iconZap')
+if(aLinkZap){
+  aLinkZap.href=linkZap
+}
+
+var aLinkInsta = document.getElementById('iconInsta')
+if(aLinkInsta){
+  aLinkInsta.href=linkInsta
+}
   // contato
   var busqNumCont = document.querySelectorAll('.numeroContat');
   busqNumCont.forEach(function(element) {
@@ -277,10 +304,10 @@ document.addEventListener('DOMContentLoaded', function() {
   busqEmai.forEach(function(element) {
       element.textContent = infoEmail;
   });
-
+  // infos de rodape
   var busq_infoLojaRodape=document.getElementById('infosRodape')
   busq_infoLojaRodape.textContent=infoEmpresaRodape
-
-
-
+  
 });
+
+

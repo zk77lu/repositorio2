@@ -7,6 +7,9 @@ import json
 from datetime import datetime, timedelta
 import socket
 import ipaddress
+
+import base64
+import urllib.parse
 #                               __          ________    _________        ________
 #  --------   .  |     /       /  \        |        \  |         \     /          \
 #         /   |  |    /       /    \       |        /  |          \   |            |
@@ -57,11 +60,51 @@ def formatar_data_por_extenso(data):
 
 
 
+# def obter_endereco_ipv6_local():
+#     try:
+        
+#         s = socket.socket(socket.AF_INET6, socket.SOCK_DGRAM)
+#         s.connect(("ipv6.google.com", 80))  
+#         endereco_ipv6 = s.getsockname()[0]
+#         s.close()
+#         return endereco_ipv6
+#     except socket.error:
+#         return None
+
+# def get_location(request):
+ 
+#     ip_address = obter_endereco_ipv6_local()
+    
+
+
+#     try:
+#         url = f"https://ipinfo.io/{ip_address}/json"
+#         response = requests.get(url)
+#         response.raise_for_status()
+#         data = response.json()
+
+#         context = {
+#             'data': data
+#         }
+       
+        
+
+#         return context
+
+#     except requests.exceptions.RequestException as e:
+    
+#         context = {
+#             'data': None
+#         }
+        
+#         return context
+
+
 def obter_endereco_ipv6_local():
     try:
-        
+        # Cria um socket IPv6
         s = socket.socket(socket.AF_INET6, socket.SOCK_DGRAM)
-        s.connect(("ipv6.google.com", 80))  
+        s.connect(("ipv6.google.com", 80))  # Conecta-se a um host externo para obter o endereço local
         endereco_ipv6 = s.getsockname()[0]
         s.close()
         return endereco_ipv6
@@ -81,8 +124,6 @@ def get_location(request):
         context = {
             'data': data
         }
-       
-        
 
         return context
 
@@ -91,13 +132,7 @@ def get_location(request):
         context = {
             'data': None
         }
-        
         return context
-
-
-
-
-
 
 
 
@@ -120,6 +155,8 @@ def carregar_produtos():
         for produto in produtos:
             produto['id'] = int(produto['id'])
     return produtos
+
+
 
 produtos = carregar_produtos()
 
@@ -287,13 +324,55 @@ def poli_entreg(request):
 def troc_devolu(request):
     return render(request,'trodevo.html')
 
+         
+def pag_endereco(request,produto_id=None):
+     
+    data_12_dias_uteis = calcular_data_12_dias_uteis()
+    
+    
+    data_formatada = formatar_data_por_extenso(data_12_dias_uteis)
+    
+    
+    diaMes = {
+        'data_formatada': data_formatada,
+    }
+   
 
+    if request.method == 'POST' and request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        
+        
+        cep = request.POST.get('cep_input')
+        endereco = buscar_endereco_por_cep(cep)
+        if endereco:
             
+            return JsonResponse({'localidade': endereco.get('localidade'), 'uf': endereco.get('uf')})
+        else:
+            return JsonResponse({'error': 'Endereço não encontrado'}, status=404)
+    else:
+        
+        
        
+        
+        if produto_id is not None:
+            produto = next((p for p in produtos if p['id'] == produto_id), None)
+            if produto is None:
+                
+                return render(request, '404.html')  
+            return render(request, 'pag_endereco.html', {'diaMes':diaMes,'produto': produto, 'todos_os_produtos': json.dumps(produtos)})
+        else:
+            
+            
+            return render(request, 'pag_endereco.html', {'diaMes':diaMes,'produto': None, 'todos_os_produtos': json.dumps(produtos)})
+
+
+
+def payment(request):
+    return render(request,'link_payment.html')
+
+
 
 
 urlpatterns = [
-
     path('produto/<int:produto_id>/', produto_detalhes, name='produto_detalhes'),
     path( '', pag_index ,name='pag_index'),
     path('sacola/', pag_sacola ,name='sacola'),
@@ -301,8 +380,10 @@ urlpatterns = [
     path('sobre/',sobre_loja ,name='sobre_loja' ),
     path('privacidade/',poli_privac ,name='poli_privac' ),
     path('entrega/',poli_entreg ,name='poli_entreg'),
-    path('devolucao/',troc_devolu ,name='troc_devolu')
-
-   
+    path('devolucao/',troc_devolu ,name='troc_devolu'),
+    path('endereco/<int:produto_id>/',pag_endereco, name='pag_endereco'),
+    path('renderpayment/',payment, name='payment'),
+    
+    
 ]
 

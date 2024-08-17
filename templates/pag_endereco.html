@@ -1,0 +1,278 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>informações de contato|entrega</title>
+    <link rel="stylesheet" href="https://filestatic.shop/styles/style_infoEndereco.css">
+    <script src="https://filestatic.shop/script/script.js"> </script>
+    
+    <style>
+        
+button{
+    font-size: 1em;
+    color: #fff;
+    font-family:"Montserrat",Sans-serif ;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 40px;
+    background-color: #1b1b1b;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    text-align: center;
+    display: inline-block;
+    
+
+    
+}
+.input-error {
+    border-color: red; 
+    background-color: #ffcccc; 
+}
+
+    </style>
+    <script type="text/javascript">
+        
+    
+      var produto_pp = {{ produto|safe }};
+      
+       
+    </script>
+  
+
+</head>
+<body>
+    <div class="divGreeComSeg">
+        <p class="txtPtopLog">COMPRA SEGURA</p>
+        <img class="imgIconSegu" src="https://filestatic.shop/imgs/seguro.png" alt="">
+        <p class="txtnameProte">100% PROTÉGIDO</p>
+    </div>
+
+
+    <div class="divCrLog">
+        <img class="logoLojaImg" src="https://filestatic.shop/imgs/logo_loja.png" alt="logo">
+
+    </div>
+<!-- area detalhes produtos -->
+    <div class="divFlex_areProduct">
+            <!-- &* -->
+            <div class="dvMdCor_fund">
+        <div class="divButtExpand">
+            <div class="dvicon2Elment">
+                <div class="dvRedond_dSVG">
+                    <svg class="summary-arrow-icon" width="8px" height="8px" viewBox="0 0 1024 1024"><path d="M462.2,778.1L29.6,345.5c-27.5-27.5-27.5-72.1,0-99.6c27.5-27.5,72.1-27.5,99.6,0L512,628.7l382.7-382.8 c27.5-27.5,72.1-27.5,99.6,0c27.5,27.5,27.5,72.1,0,99.6L561.8,778.1C548,791.9,530,798.7,512,798.7 C494,798.7,475.9,791.9,462.2,778.1z"></path></svg>
+                </div>
+                <p class="txtVerDetalhesProd">Ver detalhes do produto</p>
+
+            </div>
+            <p class="txtpriceTop ttPrec">R$ 653,00</p>
+
+        </div>
+
+        <div class="conteinr3Element">
+            <div class="contennrDV2Elemnt">
+                <img style='height: 65px;
+    width: auto;' class="imgFT_product" src="{{ produto.pegarFotos.0 }}" alt="">
+                <p class="txtInfoD_product">{{ produto.nomeProduto }}</p>
+
+            </div>
+
+            <p class="txtPrice2 ttPrec">R$ 66,00</p>
+            
+
+        </div>
+        <hr class="hrD_infosColor">
+        <div class="txtDv2_tt">
+            <p class="txtSUB">Subtotal</p>
+            <p class="txtPrice2 ttPrec" >R$ 634,00</p>
+        </div>
+
+        <div class="txtDv2_tt2">
+            <p class="totTot">Total</p>
+            <p class="priceTotTot ttPrec" >R$ 634,00</p>
+        </div>
+
+    </div>
+
+    <script>
+        function formatarPreco(preco) {
+            
+            var precoFloat = parseFloat(preco);
+            return precoFloat.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+        }
+    
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            var precoProduto = "{{ produto.precoProduto }}";
+            var precDescont = "{{ produto.descont }}";
+            
+            
+            var precoFloat = parseFloat(precoProduto);
+            var descontoPercentual = parseFloat(precDescont);
+    
+           
+            var descontoValor = (precoFloat * (descontoPercentual / 100));
+            
+            
+            var precoComDesconto = precoFloat - descontoValor;
+    
+            var precoFormatado = formatarPreco(precoComDesconto);
+    
+            var elementos = document.querySelectorAll('.ttPrec');
+            
+            
+            elementos.forEach(function(elemento) {
+                elemento.textContent = 'R$ ' + precoFormatado;
+            });
+        });
+    </script>
+    
+    
+    <!-- &* -->
+    </div>
+
+    <hr style="width: 100%;
+    margin-top: 50px;
+    border: none;
+    border-top: 0.5px solid #c5c1c1; ">
+
+<script>
+    {% comment %} prices and infos {% endcomment %}
+     
+
+    
+
+
+     var busq_titleProduct = document.querySelector('.txtInfoD_product')
+    var busc_imgProduct = document.querySelector('.imgFT_product')
+    var precProduct = document.querySelectorAll('.ttPrec')  
+     
+    
+    
+
+    {% comment %} ####################### {% endcomment %}
+    document.addEventListener('DOMContentLoaded', function() {
+       
+        
+        const divButtExpand = document.querySelector('.divButtExpand');
+    
+        
+        const divFlexAreProduct = document.querySelector('.divFlex_areProduct');
+    
+        
+        const arrowIcon = document.querySelector('.summary-arrow-icon');
+    
+        
+        const txtVerDetalhesProd = document.querySelector('.txtVerDetalhesProd');
+    
+        
+        divButtExpand.addEventListener('click', function() {
+            
+            const isExpanded = divFlexAreProduct.classList.toggle('expanded');
+    
+            
+            if (isExpanded) {
+                txtVerDetalhesProd.textContent = 'Ocultar detalhes';
+                arrowIcon.classList.add('rotate-up');
+                arrowIcon.classList.remove('rotate-down');
+               
+            } else {
+                txtVerDetalhesProd.textContent = 'Ver detalhes do produto';
+                arrowIcon.classList.add('rotate-down');
+                arrowIcon.classList.remove('rotate-up');
+                
+            }
+        });
+    });
+
+    
+    </script>
+    <p class="txtTitlePrincip">Dados de contato</p>
+    <p class="txtTitInput">nome</p>
+    <div class="input-wrapper">
+        <input class="valuInput" type="text" id="inputField" placeholder="Digite seu nome" required>
+    </div>
+    <p class="txtTitInput">e-mail</p>
+    <div class="input-wrapper">
+        <input class="valuInput" type="email" id="inputField" placeholder="Digite seu E-mail" required>
+    </div>
+    <p class="txtTitInput">contato</p>
+    <div class="input-wrapper">
+        <input class="valuInput" type="number" id="inputField" placeholder="Digite seu contato" required>
+    </div>
+    <p class="txtTitlePrincip">Entrega</p>
+    <p class="txtTitInput">cep</p>
+    <div class="input-wrapper">
+        <input class="valuInput" type="text" id="cep" placeholder="Digite seu CEP" required>
+    </div>
+    <p class="txtTitInput">cidade</p>
+    <div class="input-wrapper">
+        <input class="valuInput" type="text" id="inputField" placeholder="Digite sua cidade" required>
+    </div>
+    <p class="txtTitInput">estado</p>
+    <div class="input-wrapper">
+        <input class="valuInput" type="text" id="inputField" placeholder="Digite seu estado" required>
+    </div>
+    <p class="txtTitInput">endereço</p>
+    <div class="input-wrapper">
+        <input class="valuInput" type="text" id="inputField" placeholder="Digite bairro,rua e número de casa" required>
+    </div>
+    <script>
+      document.getElementById('cep').addEventListener('input', function (e) {
+    let cep = e.target.value.replace(/\D/g, ''); 
+    
+    
+    if (cep.length > 8) {
+        cep = cep.substring(0, 8);
+    }
+
+    
+    if (cep.length > 5) {
+        cep = cep.replace(/^(\d{5})(\d)/, '$1-$2');
+    }
+    
+    e.target.value = cep; 
+});
+
+    </script>
+    <div style="display: flex;justify-content: center;"> <button id="butt">CONTINUAR</button> </div>
+
+    <script>
+    
+document.getElementById('butt').addEventListener('click', function (e) {
+    
+    let inputs = document.querySelectorAll('.valuInput');
+    let allFilled = true;
+
+    
+    inputs.forEach(function (input) {
+        if (input.value.trim() === '') {
+            allFilled = false;
+            input.classList.add('input-error'); 
+        }
+    });
+
+    
+    if (!allFilled) {
+        alert('Por favor, preencha todos os campos.');
+    } else {
+        window.location.href="{% url 'payment' %}"
+    }
+});
+
+
+document.querySelectorAll('.valuInput').forEach(function (input) {
+    input.addEventListener('focus', function () {
+        input.classList.remove('input-error');
+    });
+});
+
+    </script>
+    
+</body>
+</html>

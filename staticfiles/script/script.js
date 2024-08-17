@@ -41,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function() {
     // Troca de slide a cada 3 segundos (3000ms)
     setInterval(nextSlide, 5000);
   });
+
+  
   
 //   area de pesquisa de produtos
 function abrirPesq(){
@@ -258,6 +260,8 @@ function fcDvOcul(){
 }
 
 // Infos de loja
+var linkDpayment= ''
+
 var infoNumero='Esperando numero'
 
 var infoEmail='Esperando email'
@@ -267,6 +271,10 @@ var nameD_loja='nameLoja'
 var infoEmpresaRodape= nameD_loja + " Informaçoes da pagina da loja"
 
 document.addEventListener('DOMContentLoaded', function() {
+  if (document.title === 'loja') {
+    
+    document.title = nameD_loja;
+}
   // contato
   var busqNumCont = document.querySelectorAll('.numeroContat');
   busqNumCont.forEach(function(element) {
@@ -277,10 +285,14 @@ document.addEventListener('DOMContentLoaded', function() {
   busqEmai.forEach(function(element) {
       element.textContent = infoEmail;
   });
-
+  // infos de rodape
   var busq_infoLojaRodape=document.getElementById('infosRodape')
   busq_infoLojaRodape.textContent=infoEmpresaRodape
+  
+  // link para pagina de pagamento
 
-
-
+  
+// #############
 });
+
+

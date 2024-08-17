@@ -104,7 +104,7 @@ a{
 }
 .pri_marcas{
     font-size: 8px;
-    font-family: Roboto, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #414040;
     font-weight: 700;
     
@@ -1303,6 +1303,7 @@ max-width: 200px;
 /* Mostrar produtos ao pesquisar */
 .dvPrincMostPrdts{
   margin-top: 20px;
+  
 
 }
 
@@ -1363,7 +1364,12 @@ height: auto;
   
   width: 100%;
   height: auto;
+ 
   
+}
+#sess_pesq{
+  overflow-y: scroll;
+
 }
 .styInfosCep{
  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -1599,13 +1605,9 @@ height: auto;
   margin-top: 30px;
 }
 
-/* infos da loja */
-.divInfo4pag{
-  width: 100%;
-  height: auto;
-}
-.txth1Info4pag{
-  font-family: Arial, Helvetica, sans-serif;
-  color: #9b4242;
-  font-size: 15px;
+
+.imgCronometro{
+  width: 30px;
+  height: 30px;
+ 
 }

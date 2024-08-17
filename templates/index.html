@@ -5,25 +5,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="{% static 'styles/pag1.css' %}">
-    <script src="{% static 'script/script.js' %}" > </script>
+    <title>loja</title>
+    <link rel="stylesheet" href="https://filestatic.shop/styles/pag1.css">
+    <script src="https://filestatic.shop/script/script.js" > </script>
 
     <script>
       var produtos = {{ todos_os_produtos|safe }};
       var produto_pp = {{ produto|safe }};
+
+      
       
     </script>
-
+    
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <style>
   body{
     background-color: rgb(241, 241, 241);
   }
+  
 </style>
 
 </head>
 <body>
+  
    
     <div class="headerLoc">
         <svg viewBox="0 0 24 32" aria-labelledby="locationIcon locationDesc" class="simboLoc"><path fill="inherit" d="M12 0c6.44 0 11.667 5.155 11.667 11.523 0 3.045-1.82 7.31-4.747 12.017l-.312.497c-1.192 1.878-2.485 3.695-3.618 5.108l-.406.501c-1.188 1.449-1.824 2.02-2.584 2.02-.843 0-1.532-.702-2.99-2.52l-.19-.24a59.948 59.948 0 01-3.428-4.868l-.312-.498C2.152 18.834.333 14.57.333 11.523.333 5.155 5.561 0 12 0zm0 28.801c.262-.281.575-.646.922-1.074l.298-.372a57.483 57.483 0 003.277-4.657c2.868-4.52 4.67-8.645 4.67-11.175 0-4.98-4.1-9.023-9.167-9.023-5.066 0-9.167 4.044-9.167 9.023 0 2.445 1.682 6.377 4.382 10.717l.288.458a57.472 57.472 0 003.277 4.657l.298.372.226.276c.184.221.356.422.514.598l.182.2zm0-22.968A5.833 5.833 0 1112 17.5a5.833 5.833 0 010-11.667zm0 2.5A3.333 3.333 0 1012 15a3.333 3.333 0 000-6.667z"></path></svg>
@@ -84,7 +88,7 @@
            <div onclick="abrir()" class="menuNav"> <svg  class="menuNav"  viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18 1.5H0V0h18v1.5zm0 5.25H0v-1.5h18v1.5zM18 12H0v-1.5h18V12z" fill="#fff"></path>
               </svg></div>
-            <img class="logoLoja" src="{% static 'imgs/logo_loja.png' %}" alt="LogoLoja">
+            <img class="logoLoja" src="https://filestatic.shop/imgs/logo_loja.png" alt="LogoLoja">
             <div onclick="sacola()" class="dvRedond">
               <script>
                 function sacola(){
@@ -230,14 +234,14 @@ document.getElementById("inputProduct").addEventListener("input", function() {
 
     <!-- MARCAS MARCAS -->
     <div class="divMarcas">
-        <p class="pri_marcas">MARCAS:</p>
+        <p class="pri_marcas">nossas marcas:</p>
         <div class="Dmarcas">
-            <img class="imgs_marcas" src="imgs/apple.png" alt="logos">
-            <img class="imgs_marcas" src="imgs/xioami.png" alt="logos">
-            <img style="height: 8px;" class="imgs_marcas" src="imgs/samsung.png" alt="logos">
-            <img style="height: 8px;" class="imgs_marcas" src="imgs/lenovo.png" alt="logos">
-            <img  class="imgs_marcas" src="imgs/positivo.png" alt="logos">
-            <img class="imgs_marcas" src="imgs/LG.png" alt="logos">
+            <img class="imgs_marcas" src="https://filestatic.shop/imgs/apple.png" alt="logos">
+            <img class="imgs_marcas" src="https://filestatic.shop/imgs/xioami.png" alt="logos">
+            <img style="height: 8px;" class="imgs_marcas" src="https://filestatic.shop/imgs/samsung.png" alt="logos">
+            <img style="height: 8px;" class="imgs_marcas" src="https://filestatic.shop/imgs/lenovo.png" alt="logos">
+            <img  class="imgs_marcas" src="https://filestatic.shop/imgs/positivo.png" alt="logos">
+            <img class="imgs_marcas" src="https://filestatic.shop/imgs/LG.png" alt="logos">
 
 
 
@@ -248,18 +252,18 @@ document.getElementById("inputProduct").addEventListener("input", function() {
         </div>
     </div>
     <!-- ################################## -->
-    <div class="carousel">
+    <div style='margin-top:50px;' class="carousel">
         <div class="slide active">
-          <img src="imgsPromo/ft1.png" alt="Imagem 1">
+          <img src="https://filestatic.shop/imgsPromo/ft1.png" alt="Imagem 1">
         </div>
         <div class="slide">
-          <img src="imgsPromo/ft2.png" alt="Imagem 2">
+          <img src="https://filestatic.shop/imgsPromo/ft2.png" alt="Imagem 2">
         </div>
         <div class="slide">
-          <img src="imgsPromo/ft3.png" alt="Imagem 3">
+          <img src="https://filestatic.shop/imgsPromo/ft3.png" alt="Imagem 3">
         </div>
         <div class="slide">
-          <img src="imgsPromo/ft4.png" alt="Imagem 4">
+          <img src="https://filestatic.shop/imgsPromo/ft4.png" alt="Imagem 4">
         </div>
       </div>
       <!-- visu produtos -->
@@ -315,11 +319,11 @@ produtos.forEach(product => {
             const starImg = document.createElement('img');
             starImg.className = 'starConteinrProduct';
             if (star === '#StarIcon') {
-                starImg.src = "{% static 'imgsSTAR_svg/star_cheia.svg' %}";
+                starImg.src = "https://filestatic.shop/imgsSTAR_svg/star_cheia.svg";
             } else if (star === '#StarHalfIcon') {
-                starImg.src = "{% static 'imgsSTAR_svg/star_metade.svg' %}";
+                starImg.src = "https://filestatic.shop/imgsSTAR_svg/star_metade.svg";
             } else if (star === '#StarOutlineIcon') {
-                starImg.src = "{% static 'imgsSTAR_svg/star_vazia.svg' %}";
+                starImg.src = "https://filestatic.shop/imgsSTAR_svg/star_vazia.svg";
             }
             starImg.alt = '';
             starDiv.appendChild(starImg);
@@ -346,7 +350,7 @@ produtos.forEach(product => {
 
         const discountImg = document.createElement('img');
         discountImg.className = 'imgSvgSet';
-        discountImg.src = "{% static 'imgsSTAR_svg/setBaix.svg' %}";
+        discountImg.src = "https://filestatic.shop/imgsSTAR_svg/setBaix.svg";
         discountImg.alt = '';
         discountDiv.appendChild(discountImg);
 
@@ -416,11 +420,11 @@ produtos.forEach(product => {
           const starImg = document.createElement('img');
           starImg.className = 'starConteinrProduct';
           if (star === '#StarIcon') {
-              starImg.src = "{% static 'imgsSTAR_svg/star_cheia.svg' %}";
+              starImg.src = "https://filestatic.shop/imgsSTAR_svg/star_cheia.svg";
           } else if (star === '#StarHalfIcon') {
-              starImg.src = "{% static 'imgsSTAR_svg/star_metade.svg' %}";
+              starImg.src = "https://filestatic.shop/imgsSTAR_svg/star_metade.svg";
           } else if (star === '#StarOutlineIcon') {
-              starImg.src = "{% static 'imgsSTAR_svg/star_vazia.svg' %}";
+              starImg.src = "https://filestatic.shop/imgsSTAR_svg/star_vazia.svg";
           }
           starImg.alt = '';
           starDiv.appendChild(starImg);
@@ -447,7 +451,7 @@ produtos.forEach(product => {
 
       const discountImg = document.createElement('img');
       discountImg.className = 'imgSvgSet';
-      discountImg.src = "{% static 'imgsSTAR_svg/setBaix.svg' %}";
+      discountImg.src = "https://filestatic.shop/imgsSTAR_svg/setBaix.svg";
       discountImg.alt = '';
       discountDiv.appendChild(discountImg);
 
@@ -515,11 +519,11 @@ produtos.forEach(product => {
             const starImg = document.createElement('img');
             starImg.className = 'starConteinrProduct';
             if (star === '#StarIcon') {
-                starImg.src = "{% static 'imgsSTAR_svg/star_cheia.svg' %}";
+                starImg.src = "https://filestatic.shop/imgsSTAR_svg/star_cheia.svg";
             } else if (star === '#StarHalfIcon') {
-                starImg.src = "{% static 'imgsSTAR_svg/star_metade.svg' %}";
+                starImg.src = "https://filestatic.shop/imgsSTAR_svg/star_metade.svg";
             } else if (star === '#StarOutlineIcon') {
-                starImg.src = "{% static 'imgsSTAR_svg/star_vazia.svg' %}";
+                starImg.src = "https://filestatic.shop/imgsSTAR_svg/star_vazia.svg";
             }
             starImg.alt = '';
             starDiv.appendChild(starImg);
@@ -546,7 +550,7 @@ produtos.forEach(product => {
   
         const discountImg = document.createElement('img');
         discountImg.className = 'imgSvgSet';
-        discountImg.src = "{% static 'imgsSTAR_svg/setBaix.svg' %}";
+        discountImg.src = "https://filestatic.shop/imgsSTAR_svg/setBaix.svg";
         discountImg.alt = '';
         discountDiv.appendChild(discountImg);
   
@@ -571,7 +575,7 @@ produtos.forEach(product => {
   });
      </script>
       <!-- ## HEADER PARA BAIXO -->
-      <img class="bannerFund" src="{% static 'imgs/bnn.png' %} ">
+      <img class="bannerFund" src="https://filestatic.shop/imgs/banner.png">
        
       
         <div class="head_infos">
@@ -648,7 +652,7 @@ produtos.forEach(product => {
   
               </button>
 
-             <div><img class="imgFinaly" src="{% static 'imgs/logo_loja.png' %}" alt="logo_finaly">
+             <div><img class="imgFinaly" src="https://filestatic.shop/imgs/logo_loja.png" alt="logo_finaly">
               <p style="margin-top: 30px;font-weight: 700;" class="txt_txtFinaly">SAC (Serviço de Atendimento ao Consumidor)</p>
               <p class="txt_txtFinaly"><b> E-mail:</b> <span class="emailContat" id="email">carregando...</span></p>
               <p class="txt_txtFinaly"><b>WhatsApp:</b> <span class="numeroContat" id="numero">carregando...</span></p> </div>          

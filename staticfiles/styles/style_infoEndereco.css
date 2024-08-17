@@ -1,0 +1,269 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+
+}
+.divCrLog{
+    width: 100%;
+    height: 100px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.divGreeComSeg{
+    background-color: #aac67b;
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.txtPtopLog{
+    font-size: 11px;
+    font-family: "Montserrat",Sans-serif;
+    color: #1b1b1b;
+    margin: 0;
+    font-weight: 700;
+}
+.imgIconSegu{
+    width: 20px;
+    height: auto;
+    margin-left: 10px;
+}
+.txtnameProte{
+    font-family: Open Sans,sans-serif;
+    color: #1b1b1b;
+    font-size: 11px;
+    margin-left: 10px;
+}
+.logoLojaImg{
+    height: 80px;
+    width: auto;
+}
+.divFlex_areProduct{
+    width: 100%;
+    height: 10px;
+    background-color:rgba(230,230,230,0.6);
+    transition: height 0.5s ease; 
+    overflow: hidden;
+    padding-bottom: 30px;
+    position: absolute;
+    z-index: 1;
+
+}
+.expanded {
+    height: 100vh !important; 
+    transition-delay: 0.2s;
+}
+.divButtExpand{
+    width: 100%;
+    height: 53px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dvicon2Elment{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.dvMdCor_fund{
+    width: 100%;
+    height: auto;
+    background-color: white;
+    padding-bottom: 30px;
+
+}
+.dvRedond_dSVG{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px solid #1b1b1b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 7px;
+}
+.txtVerDetalhesProd{
+    color: #020202;
+    font-size: 13px;
+    font-family: Open Sans,sans-serif;
+}
+.txtpriceTop{
+    color: #1b1b1b;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: Open Sans,sans-serif;
+    margin-right: 20px;
+}
+.conteinr3Element{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+.contennrDV2Elemnt{
+    display: flex;
+    width: 80%;
+    height: auto;
+    padding-left: 10px;
+
+}
+.txtInfoD_product{
+    font-family: "Montserrat",Sans-serif;
+    color: #1b1b1b;
+    font-size: 14px;
+    margin-left: 10px;
+
+}
+.imgFT_product{
+    height: 65px;
+    width: auto;
+}
+.txtPrice2{
+    font-size: 14px;
+    font-family: "Montserrat",Sans-serif;
+    color: #1b1b1b;
+    margin-right: 10px;
+
+
+
+}
+.hrD_infosColor{
+    
+    width: 95%;
+    margin-top: 10px;
+    border: none;
+    border-top: 0.5px solid #999; 
+    
+}
+.txtDv2_tt{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.txtDv2_tt2{
+    display: flex;
+    justify-content: space-between;
+}
+.txtSUB{
+    font-size: 14px;
+    font-family: "Montserrat",Sans-serif;
+    color: #1b1b1b;
+    margin-left: 10px;
+}
+.totTot{
+    font-family: "Montserrat",Sans-serif;
+    font-size: 22px;
+    color: #1b1b1b;
+    font-weight: 700;
+    margin: 0;
+    margin-left: 10px;
+    
+
+
+
+}
+.priceTotTot{
+    font-family: "Montserrat",Sans-serif;
+    font-size: 22px;
+    color: #1b1b1b;
+    font-weight: 700;
+    margin: 0;
+    margin-right: 10px;
+    
+
+
+}
+
+.summary-arrow-icon {
+    transition: transform 0.3s ease;
+}
+
+.summary-arrow-icon.rotate-up {
+    transform: rotate(180deg); 
+}
+
+.summary-arrow-icon.rotate-down {
+    transform: rotate(0deg); 
+}
+
+/* styles de inputs */
+
+
+.input-wrapper {
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+
+}
+
+
+input {
+    font-size: 16px;
+    padding: 12px;
+    border: 1px solid rgba(27,27,27,0.3); 
+    border-radius: 10px;
+    width: 100%;
+    height: 46px;
+    box-sizing: border-box;
+    background: transparent;
+    position: relative;
+    transition: border-color 0.3s ease; 
+}
+
+
+input::placeholder {
+    font-family: "Montserrat",Sans-serif;
+    
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    
+}
+
+
+input:focus::placeholder,
+input:not(:placeholder-shown)::placeholder {
+    top: 5px;
+    left: 8px;
+    font-size: 10px;
+    color: #999;
+}
+
+
+input:focus {
+    border-color: rgb(54, 219, 54) !important; 
+}
+
+
+input:focus-visible {
+    outline: none;
+}
+.txtTitInput{
+    color: #1b1b1b;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: "Montserrat",Sans-serif;
+    margin: 0;
+    margin-left: 20px;
+}
+.txtTitlePrincip{
+    font-weight: 700;
+    font-family: "Montserrat",Sans-serif;
+    font-size: 22px;
+    color: #1b1b1b;
+    margin-left: 20px;
+
+
+ }
+
