@@ -1,19 +1,77 @@
+{% load static %}
+
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Detalhes do Produto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ produto.nome }}</title>
+    <link rel="stylesheet" href="{% static 'sty.css' %}">
 </head>
 <body>
-    {% if ipv6 %}
-        <h1>Detalhes da Localização</h1>
-        <p>País: {{ ipv6.data.region }}</p>
-        <p>Cidade: {{ ipv6.data.city }}</p>
-        <!-- Adicione mais campos conforme necessário -->
-    {% else %}
-        <p>Informações de localização não disponíveis.</p>
-    {% endif %}
+     <h1>Ola </h1>
+    <script type="text/javascript">
+        // Passando o produto para uma variável JavaScript
+        var prod = {{ produto|safe }};
+
+        
+
+        
+    </script>
     
+<script>for (var chave in prod) {
+    var escrev=prod[chave]
+    document.write(escrev + '<br>')
+
+}</script> 
+<a class='jdjjd' href="{% url 'produto_detalhes' produto_id=1022773591 %}">Ir para Produto 1</a>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#buscar_cep').click(function(event) {
+                event.preventDefault();
+                var cep = $('#busCep').val();
+                if (cep) {
+                    $.ajax({
+                        url: '/buscar_endereco/',
+                        data: {
+                            'cep': cep
+                        },
+                        dataType: 'json',
+                        success: function(data) {
+                            if (data.error) {
+                                alert(data.error);
+                            } else {
+                                $('#resultado_cep').html('<h2>Endereço</h2>' +
+                                                        '<p>CEP: ' + data.endereco.cep + '</p>' +
+                                                        '<p>Logradouro: ' + data.endereco.logradouro + '</p>' +
+                                                        '<p>Bairro: ' + data.endereco.bairro + '</p>' +
+                                                        '<p>Cidade: ' + data.endereco.localidade + '</p>' +
+                                                        '<p>Estado: ' + data.endereco.uf + '</p>');
+                            }
+                        },
+                        error: function(xhr, status, error) {
+                            alert('Erro ao buscar endereço: ' + error);
+                        }
+                    });
+                } else {
+                    alert('Por favor, informe um CEP.');
+                }
+            });
+        });
+    </script>
+
+    <h1>Buscar Endereço pelo CEP</h1>
+    <!-- Campo de entrada para o CEP -->
+    <label for="busCep">CEP:</label>
+    <input type="text" id="busCep" name="busCep">
+    <button id="buscar_cep">Buscar</button>
     
+    <!-- Div para exibir o resultado da busca -->
+    <div id="resultado_cep"></div>
+
+
+   
 </body>
 </html>

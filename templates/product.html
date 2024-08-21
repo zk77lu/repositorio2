@@ -1,130 +1,25 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ produto.nomeProduto }}</title>
     
+    <link rel="stylesheet" href="{% static 'styles/pag1.css' %}}"> 
     
+    <script src="{% static 'script/script.js' %}}"></script> 
+    <link rel="stylesheet" href="{% static 'styles/style_carrosselImg.css' %}}"> 
+    <link rel="stylesheet" href="{% static 'https://unpkg.com/swiper/swiper-bundle.min.css' %}}"> 
+    <script src="{% static 'https://unpkg.com/swiper/swiper-bundle.min.js' %}}"></script> 
+    <link rel="stylesheet" href="{% static 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css' %}}"> 
+    <link rel="stylesheet" href="{% static 'styles/avali.css' %}}" >
     
-    <link rel="stylesheet" href="https://filestatic.shop/styles/pag1.css">
-    
-    <script src="https://filestatic.shop/script/script.js"></script> 
-    
-    
-    <link rel="stylesheet" href="https://filestatic.shop/styles/style_carrosselImg.css"> 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"> 
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
-    
-    <link rel="stylesheet" href="https://filestatic.shop/styles/avali.css" >
-    
-
-    <script type="text/javascript">
-      // Passar os produtos para uma variável JavaScript
-      var produtos = {{ todos_os_produtos|safe }};
-      var produto_pp = {{ produto|safe }};
-      var loc = {{ipv6|safe}}
-      
-      
-      
-      
-  </script>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-  <style>
-    @keyframes rotateLeftRight {
-        0% { transform: rotate(0deg); }
-        25% { transform: rotate(-20deg); }
-        50% { transform: rotate(0deg); }
-        75% { transform: rotate(20deg); }
-        100% { transform: rotate(0deg); }
-    }
-    
-    .imgCronometro {
-        animation: rotateLeftRight 2s infinite;
-    }
-
-    #cronometro {
-      font-size: 20px;
-      color: red;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-weight: 500;
-      
-  }
-  .termm{
-    font-size: 20px;
-    color: red;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: 500;
-    margin-left:5px;
-    margin-right:5px;
-
-  }
-  .imgCronometro{
-    width: 25px;
-    height: 25px;
-    margin-left:20px;
-    
-    
-  }
-  .dvCronom{
-    align-items: center;
-    height:50px;
-    background-color: rgb(255, 255, 255);
-    display:flex
-
-    
-  }
-  .ofAtHoj{
-    background-color:red;
-    border-radius: 5px;
-    padding: 10px;
-    color:white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    width:180px;
-    margin-left:40px;
-    margin-top:30px;
-    
-  }
-  .dvFixed{
-    position: fixed;
-    z-index: 100;
-    width: 50px;
-    height: 100px;
-    background-color: rgb(0, 0, 0, 0.5);
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    margin-top:70vh;
-    right:0;
-    align-items: center;
-    display:flex;
-    flex-direction: column;
-  }
-  .iconRedSocial{
-    width: 95%;
-    height: auto;
-  }
-    </style>
-    
-  
-
-
-
-
-
     
 
 </head>
 <body>
-  <div class="dvFixed">
-    <a id="iconZap" href=""><img class="iconRedSocial" src="https://static.vecteezy.com/system/resources/previews/016/639/985/original/whatsapp-3d-icon-free-png.png" alt=""></a>
-
-    <a id="iconInsta" href=""><img class="iconRedSocial" src="https://static.vecteezy.com/system/resources/previews/009/673/731/original/glossy-instagram-3d-render-icon-free-png.png" alt=""></a>
-  </div>
-  
 
 
   
@@ -135,70 +30,7 @@
     <div class="headerLoc">
         <svg viewBox="0 0 24 32" aria-labelledby="locationIcon locationDesc" class="simboLoc"><path fill="inherit" d="M12 0c6.44 0 11.667 5.155 11.667 11.523 0 3.045-1.82 7.31-4.747 12.017l-.312.497c-1.192 1.878-2.485 3.695-3.618 5.108l-.406.501c-1.188 1.449-1.824 2.02-2.584 2.02-.843 0-1.532-.702-2.99-2.52l-.19-.24a59.948 59.948 0 01-3.428-4.868l-.312-.498C2.152 18.834.333 14.57.333 11.523.333 5.155 5.561 0 12 0zm0 28.801c.262-.281.575-.646.922-1.074l.298-.372a57.483 57.483 0 003.277-4.657c2.868-4.52 4.67-8.645 4.67-11.175 0-4.98-4.1-9.023-9.167-9.023-5.066 0-9.167 4.044-9.167 9.023 0 2.445 1.682 6.377 4.382 10.717l.288.458a57.472 57.472 0 003.277 4.657l.298.372.226.276c.184.221.356.422.514.598l.182.2zm0-22.968A5.833 5.833 0 1112 17.5a5.833 5.833 0 010-11.667zm0 2.5A3.333 3.333 0 1012 15a3.333 3.333 0 000-6.667z"></path></svg>
 
-        <p class="txt_loc_header">Frete grátis para <span id="proccity">Primeira Compra</span></p>
-
-        <script>
-          
-         
-          var cidad = loc.data.city
-          var uf = loc.data.region
-
-          var mudLocipv6 = document.getElementById('proccity')
-
-          
-        
-         
-          
-
-         
-
-          function obterSiglaEstado(nomeEstado) {
-    // Objeto que mapeia os nomes completos dos estados para suas siglas
-    const estados = {
-        "Acre": "AC",
-        "Alagoas": "AL",
-        "Amapá": "AP",
-        "Amazonas": "AM",
-        "Bahia": "BA",
-        "Ceará": "CE",
-        "Brasília": "DF",
-        "Espírito Santo": "ES",
-        "Goiás": "GO",
-        "Maranhão": "MA",
-        "Mato Grosso": "MT",
-        "Mato Grosso do Sul": "MS",
-        "Minas Gerais": "MG",
-        "Pará": "PA",
-        "Paraíba": "PB",
-        "Paraná": "PR",
-        "Pernambuco": "PE",
-        "Piauí": "PI",
-        "Rio de Janeiro": "RJ",
-        "Rio Grande do Norte": "RN",
-        "Rio Grande do Sul": "RS",
-        "Rondônia": "RO",
-        "Roraima": "RR",
-        "Santa Catarina": "SC",
-        "São Paulo": "SP",
-        "Sergipe": "SE",
-        "Tocantins": "TO"
-    };
-
-    
-    if (estados[nomeEstado]) {
-        return estados[nomeEstado];
-    }
-    
-}
-var resuFunUF = obterSiglaEstado(uf)
-
-var formtTxtD_loc = cidad + ', ' + resuFunUF + ' e Regiões'
-mudLocipv6.textContent = formtTxtD_loc
-
-
-
-        </script>
-        
+        <p class="txt_loc_header">Frete grátis para <span id="proc_city">Palmas, To</span> e Região</p>
        
 
 
@@ -215,9 +47,9 @@ mudLocipv6.textContent = formtTxtD_loc
                 <div class="dvTRi"></div>
                 <!-- Infos de dentro do menu -->
                 <ul class="uls">
-                    <li class="lis lis1"><a class="links_a" href="{% url 'pag_index' %}">Página Inicial</a></li>
-                    
-                    <li class="lis"><a class="links_a" href="{% url 'contato' %}">Entre em Contato !</a></li>
+                    <li class="lis"><a class="links_a" href="index.html">Página Inicial</a></li>
+                    <li class="lis"><a class="links_a" href="">Nossos Produtos</a></li>
+                    <li class="lis"><a class="links_a" href="contact.html">Entre em Contato !</a></li>
 
                     
 
@@ -232,7 +64,7 @@ mudLocipv6.textContent = formtTxtD_loc
                           <path d="M14 1c4.971 0 9 4.029 9 9m-9-5c2.761 0 5 2.239 5 5" stroke="#202020"></path>
                         </g>
                       </svg>
-                      <p id="numero" class="txt_contat numeroContat">carregando...</p>
+                      <p id="numero" class="txt_contat">carregando...</p>
 
                 </div>
                 <div class="dvContat">
@@ -244,7 +76,7 @@ mudLocipv6.textContent = formtTxtD_loc
                           <path d="M8.25000033 5.50000033h5.49999997M8.25000033 9.166667h5.49999997" stroke="#202020" stroke-width="2" stroke-linecap="square"></path>
                         </g>
                       </svg>
-                      <p id="email" class="txt_contat emailContat">carregando...</p>
+                      <p id="email" class="txt_contat">carregando...</p>
 
                 </div>
 
@@ -253,14 +85,8 @@ mudLocipv6.textContent = formtTxtD_loc
            <div onclick="abrir()" class="menuNav"> <svg  class="menuNav"  viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M18 1.5H0V0h18v1.5zm0 5.25H0v-1.5h18v1.5zM18 12H0v-1.5h18V12z" fill="#fff"></path>
               </svg></div>
-            <img class="logoLoja" src="https://filestatic.shop/imgs/logo_loja.png" alt="LogoLoja">
+            <img class="logoLoja" src="ft.png" alt="LogoLoja">
             <div onclick="sacola()" class="dvRedond">
-              <script>
-                function sacola(){
-  window.location.href="{% url 'sacola' %}"
-}
-
-              </script>
                 
                   <div class="dvSpan"> <span class="totCarrinho">0</span> </div>
                 
@@ -300,23 +126,71 @@ mudLocipv6.textContent = formtTxtD_loc
         <!-- mostrar produtos daqui para baixo -->
         <div class="dvPrincMostPrdts">
 
-         
-          
-        
+          <!-- <div class="sessCadMostProdut">
+            <img class="mostIMG_produtPesq" src="https://lardocelaroficial.com/cdn/shop/products/Screenshot_2_009ff235-6542-4cbc-b48f-5d9ea1ba0f9b_120x120.png?v=1710133359" alt="">
+            <div class="divPesqProdut2Txt">
+              <p class="mostPesqNomProdut">Iphone 11 128GGB preto</p>
+              <p class="mostPesqPrecProdut">R$ 233,00</p>
+            </div>
+          </div> -->
+
          <script>
-       
-       function formatPrice(price) {
+          var listObjt = {
+    prod1: {
+        nomeProduto: "Iphone 8 128gb",
+        precoProduto: null,
+        pegarFotos: ["https://lardocelaroficial.com/cdn/shop/products/Screenshot_2_009ff235-6542-4cbc-b48f-5d9ea1ba0f9b_120x120.png?v=1710133359", "https://a-static.mlcdn.com.br/450x450/forno-eletrico-de-embutir-electrolux-efficient-80l-220v-micro-ondas-de-embutir-electrolux-experience-34l-110v/fastshop2/excjoe8e216/ad435094dd150f7a3666cee63adead92.jpeg"],
+        descont: 10,
+        id: 646644
+    },
+    prod2: {
+        nomeProduto: "Iphone 11 8gb",
+        precoProduto: 6356.98,
+        pegarFotos: ["https://lardocelaroficial.com/cdn/shop/products/Screenshot_2_009ff235-6542-4cbc-b48f-5d9ea1ba0f9b_120x120.png?v=1710133359", "https://lardocelaroficial.com/cdn/shop/products/Screenshot_2_009ff235-6542-4cbc-b48f-5d9ea1ba0f9b_120x120.png?v=1710133359"],
+        descont: 50,
+        id: 737727
+    },
+    prod3: {
+        nomeProduto: "Iphone 12 128gb",
+        precoProduto: 692.99,
+        pegarFotos: ["https://lardocelaroficial.com/cdn/shop/products/Screenshot_2_009ff235-6542-4cbc-b48f-5d9ea1ba0f9b_120x120.png?v=1710133359", "https://a-static.mlcdn.com.br/450x450/forno-eletrico-de-embutir-electrolux-efficient-80l-220v-micro-ondas-de-embutir-electrolux-experience-34l-110v/fastshop2/excjoe8e216/ad435094dd150f7a3666cee63adead92.jpeg"],
+        descont: 50,
+        id: 620882
+    },
+    prod4: {
+        nomeProduto: "samsung 12 128gb",
+        precoProduto: 2678.00,
+        pegarFotos: ["https://lardocelaroficial.com/cdn/shop/products/Screenshot_2_009ff235-6542-4cbc-b48f-5d9ea1ba0f9b_120x120.png?v=1710133359", "https://a-static.mlcdn.com.br/450x450/forno-eletrico-de-embutir-electrolux-efficient-80l-220v-micro-ondas-de-embutir-electrolux-experience-34l-110v/fastshop2/excjoe8e216/ad435094dd150f7a3666cee63adead92.jpeg"],
+        descont: 50,
+        id: 73782
+    },
+    prod5: {
+        nomeProduto: "bombox 3",
+        precoProduto: 34.78,
+        pegarFotos: ["https://lardocelaroficial.com/cdn/shop/products/Screenshot_2_009ff235-6542-4cbc-b48f-5d9ea1ba0f9b_120x120.png?v=1710133359", "https://a-static.mlcdn.com.br/450x450/caneta-caligrafia-p-tinteiro-5-bicos-pena-desenho-lettering-levolpe/levolpe/p18065/b605802a63c94dd53e4ee00d602a9516.jpg"],
+        descont: 50,
+        id: 83882
+    }
+};
+
+function formatPrice(price) {
+    // Verifica se o preço é um número
     if (typeof price === 'number') {
+        // Formata o número com separador de milhar e duas casas decimais
         return price.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
     } else if (typeof price === 'string') {
+        // Remove espaços em branco e substitui vírgulas por pontos
         price = price.trim().replace(',', '.');
+        // Verifica se o preço é um número válido
         if (!isNaN(parseFloat(price)) && isFinite(price)) {
+            // Formata o preço como número
             return formatPrice(parseFloat(price));
         } else {
+            // Se não for um número válido, retorna '0,00'
             return '0,00';
         }
     } else {
-        return '0,00';
+        return '0,00'; // Retorna 0,00 se não for um número válido
     }
 }
 
@@ -330,11 +204,13 @@ function searchProducts(query) {
 
     var matches = [];
 
-    for (var key in produtos) {
-        var product = produtos[key];
+    for (var key in listObjt) {
+        var product = listObjt[key];
         var productName = product.nomeProduto.toLowerCase();
         if (productName.startsWith(query.toLowerCase())) {
+            // Calcula o preço com desconto
             var precoComDesconto = product.precoProduto ? product.precoProduto * (1 - (product.descont / 100)) : 0;
+
             var highlightedName = productName.replace(new RegExp('^' + query, 'gi'), function(match) {
                 return '<span class="highlight">' + match + '</span>';
             });
@@ -352,7 +228,7 @@ function searchProducts(query) {
 
             var link = document.createElement("a");
             link.classList.add("linkProdut");
-            link.href = `/produto/${product.id}/`;
+            link.href = "{% url 'produto_detalhes' produto_id=" + product.id + " %}";
 
             var img = document.createElement("img");
             img.classList.add("mostIMG_produtPesq");
@@ -402,16 +278,32 @@ document.getElementById("inputProduct").addEventListener("input", function() {
     
     <!-- codigo carrossel de imagens  -->
 
-    <div  class="swiper-container">
-      <div  class="swiper-wrapper">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
        
+        <!-- <div class="swiper-slide">
+          <img src="https://a-static.mlcdn.com.br/450x450/iphone-12-apple-128gb-product-red-tela-61-12mp-ios/magazineluiza/231148000/58bbf82d8bf4b1a63b767e50e5df73eb.jpg" alt="Foto 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://a-static.mlcdn.com.br/450x450/iphone-12-apple-128gb-product-red-tela-61-12mp-ios/magazineluiza/231148000/94c3955491acde00fb922fb213256f8f.jpg" alt="Foto 1">
+        </div>
+        <div class="swiper-slide">
+          <img src="https://a-static.mlcdn.com.br/450x450/iphone-12-apple-128gb-product-red-tela-61-12mp-ios/magazineluiza/231148000/58bbf82d8bf4b1a63b767e50e5df73eb.jpg" alt="Foto 1">
+        </div> -->
         
         
       </div>
       <script>
-
-
-var linkIMG = produto_pp.pegarFotos
+        var linkIMG = [
+    "https://a-static.mlcdn.com.br/450x450/forno-eletrico-de-embutir-philco-46l-110v-microondas-philco-pme25bm-25l-embutir-110v/techshop/kitfrnphc41frnphc30/a66a72483b3238e5c169685c67d8eb21.jpeg",
+    "https://a-static.mlcdn.com.br/450x450/forno-eletrico-de-embutir-philco-46l-110v-microondas-philco-pme25bm-25l-embutir-110v/techshop/kitfrnphc41frnphc30/e87a2267ddee6fa45ca1e05b32727fa8.jpeg",
+    "https://a-static.mlcdn.com.br/450x450/forno-eletrico-de-embutir-philco-46l-110v-microondas-philco-pme25bm-25l-embutir-110v/techshop/kitfrnphc41frnphc30/e2e0e026730e3d939da55f818fffd478.jpeg",
+    "https://a-static.mlcdn.com.br/450x450/forno-eletrico-de-embutir-philco-46l-110v-microondas-philco-pme25bm-25l-embutir-110v/techshop/kitfrnphc41frnphc30/997328a430bd6d43c0348230cd9a8d49.jpeg",
+    "https://a-static.mlcdn.com.br/450x450/forno-eletrico-de-embutir-philco-46l-110v-microondas-philco-pme25bm-25l-embutir-110v/techshop/kitfrnphc41frnphc30/edd9cb64d5647f56f70d6dff0c2282b0.jpeg",
+    "https://a-static.mlcdn.com.br/450x450/forno-eletrico-de-embutir-philco-46l-110v-microondas-philco-pme25bm-25l-embutir-110v/techshop/kitfrnphc41frnphc30/580b61ebc267e6995d064d428224c32a.jpeg",
+    "https://a-static.mlcdn.com.br/450x450/forno-eletrico-de-embutir-philco-46l-110v-microondas-philco-pme25bm-25l-embutir-110v/techshop/kitfrnphc41frnphc30/077b9dcceae6a9596ec17752ccebb92b.jpeg",
+    "https://a-static.mlcdn.com.br/450x450/forno-eletrico-de-embutir-philco-46l-110v-microondas-philco-pme25bm-25l-embutir-110v/techshop/kitfrnphc41frnphc30/9b384f97b0d5122a83caef5f273c7d74.jpeg"
+];
 
 var swiperWrapper = document.querySelector('.swiper-wrapper');
 
@@ -439,7 +331,7 @@ linkIMG.forEach(function(link) {
         loop: true,
         grabCursor: false,
         centeredSlides: false,
-        slidesPerView: 1, 
+        slidesPerView: 1, // Mostra um slide de cada vez
         spaceBetween: 30,
         pagination: {
           el: '.swiper-pagination',
@@ -481,20 +373,30 @@ linkIMG.forEach(function(link) {
     <!-- ................... -->
 
     <div id="title_product" class="title_product">
-      <p class="txtTitle nameProduct"></p>
+      <p class="txtTitle nameProduct">Iphone 11 pro cor preto 11 pro cor preto 256g Iphone 11 pro cor preto 256g</p>
     </div>
     
    
 
     <div class="dv_avali">
       <div class="dv_estrelas">
+        <!-- <img class="imgEstrela" src="imgsSTAR_svg/star_cheia.svg" alt="">
+        <img class="imgEstrela" src="imgsSTAR_svg/star_cheia.svg" alt="">
+        <img class="imgEstrela" src="imgsSTAR_svg/star_cheia.svg" alt="">
+        <img class="imgEstrela" src="imgsSTAR_svg/star_cheia.svg" alt="">
+        <img class="imgEstrela" src="imgsSTAR_svg/star_cheia.svg" alt=""> -->
+
+
+
+
       
+        
       </div>
       <span class="txtComent"></span>
 
     </div>
     <script>
-     var listStar = produto_pp.starHeader
+     var listStar = ["#StarIcon", "#StarIcon", "#StarIcon", "#StarHalfIcon", "#StarOutlineIcon"];
      var buscDV_estrelas = document.querySelector('.dv_estrelas');
 
      for (var i = 0; i < listStar.length; i++) {
@@ -502,11 +404,11 @@ linkIMG.forEach(function(link) {
        novImgStar.classList.add('imgEstrela');
 
        if (listStar[i] === "#StarIcon") {
-          novImgStar.src = "https://filestatic.shop/imgsSTAR_svg/star_cheia.svg";
+          novImgStar.src = 'imgsSTAR_svg/star_cheia.svg';
        } else if (listStar[i] === "#StarHalfIcon") {
-          novImgStar.src ="https://filestatic.shop/imgsSTAR_svg/star_metade.svg";
+          novImgStar.src = 'imgsSTAR_svg/star_metade.svg';
        } else if (listStar[i] === "#StarOutlineIcon") {
-          novImgStar.src ="https://filestatic.shop/imgsSTAR_svg/star_vazia.svg";
+          novImgStar.src = 'imgsSTAR_svg/star_vazia.svg';
        }
 
        buscDV_estrelas.appendChild(novImgStar);
@@ -514,8 +416,7 @@ linkIMG.forEach(function(link) {
 
     </script>
     <script>
-      
-      var pontAvaliac= produto_pp.totAvali
+      var pontAvaliac= '5.0'
       var formtPontAvali = '('+pontAvaliac+')'
       var bscTxtPont=document.querySelector('.txtComent')
       bscTxtPont.textContent=formtPontAvali
@@ -527,104 +428,30 @@ linkIMG.forEach(function(link) {
 
     <hr style="margin-left: 20px;margin-top: 10px;">
 
-    <div class="divD_greeDescont">
-      <p class="prace_orig">R$ <span id="prace_orig"></span></p>
-
-      <div class="greeDescontProduct">
-        <img class="setGreePagProduct" src="https://filestatic.shop/imgsSTAR_svg/setBaix.svg" alt="">
-        <p class="greeValueDescont">{{produto.descont}}%</p>
-      </div>
-      
-    </div>
-    
-    </div>
-
+    <p class="prace_orig">R$ <span id="prace_orig"></span></p>
     <div style="display: flex;align-items: center;margin-top: -10px;height: 33px;">
       <p class="por">por</p>
       <p class="prace_aplic_desc">R$ <span id="prace_aplic_desc"></span></p>
 
       <script>
-      
+      var precOrigin = 5567.90;
+      var valorDescontPrec = 30;
+      var calcDescontPrec = precOrigin * (valorDescontPrec / 100);
+      var valorComDesc = precOrigin - calcDescontPrec;
 
-      var precOrigin = produto_pp.precoProduto;
-var valorDescontPrec = produto_pp.descont;
-var calcDescontPrec = precOrigin * (valorDescontPrec / 100);
-var valorComDesc = precOrigin - calcDescontPrec;
+      precOriginFormat = precOrigin.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
+      valorComDescFormat = valorComDesc.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
 
-// Formatar os valores para duas casas decimais
-var precOriginFormat = precOrigin.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-var valorComDescFormat = valorComDesc.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+      var txtPrecOrig = document.getElementById('prace_orig');
+      txtPrecOrig.textContent = precOriginFormat;
 
-var txtPrecOrig = document.getElementById('prace_orig');
-txtPrecOrig.textContent = precOriginFormat;
-
-var txtPrecOmDesc = document.getElementById('prace_aplic_desc');
-txtPrecOmDesc.textContent = valorComDescFormat;
-
+      var txtPrecOmDesc = document.getElementById('prace_aplic_desc');
+      txtPrecOmDesc.textContent = valorComDescFormat;
 
 
       </script>
 
     </div>
-    <div class='ofAtHoj'> ofertaaa válida até hoje ;) </div>
-    <div class='dvCronom'>
-      
-      <img  class="imgCronometro" src="https://filestatic.shop/imgs/cronometro.png" alt="">
-      <p class='termm'>Termina em </p>
-      <div id="cronometro"></div>
-    </div>
-
-    <script>
-      
-      var tempoPromocao = 47 * 60 * 1000;
-
-    
-      function addZero(numero) {
-          return numero < 10 ? '0' + numero : numero;
-      }
-
-      
-      function iniciarCronometro() {
-          
-          var fimPromocao = localStorage.getItem('fimPromocao');
-          if (!fimPromocao) {
-              fimPromocao = new Date().getTime() + tempoPromocao;
-              localStorage.setItem('fimPromocao', fimPromocao);
-          }
-
-          
-          var intervalo = setInterval(function() {
-              
-              var agora = new Date().getTime();
-
-              
-              var diferenca = fimPromocao - agora;
-
-              
-              var horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-              var minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
-              var segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
-
-              
-              horas = addZero(horas);
-              minutos = addZero(minutos);
-              segundos = addZero(segundos);
-
-              
-              document.getElementById('cronometro').innerHTML = horas + ":" + minutos + ":" + segundos;
-
-              
-              if (diferenca < 0) {
-                  clearInterval(intervalo);
-                  localStorage.removeItem('fimPromocao');
-                  document.getElementById('cronometro').innerHTML = "00:00:00";
-              }
-          }, 1000);
-      }
-
-      // Inicia o cronômetro quando a página carregar
-      document.addEventListener('DOMContentLoaded', iniciarCronometro);
-  </script>
     <!-- formas de pagamento -->
     <div  id="dv_super_formsPag" class="dv_super_formsPag">
 
@@ -699,7 +526,7 @@ txtPrecOmDesc.textContent = valorComDescFormat;
         if(index === 0){
         
         var resu_0=praceAtual.toLocaleString('pt-BR', { minimumFractionDigits: 2 });
-        element.textContent=valorComDescFormat
+        element.textContent=resu_0
 
         }
         else{
@@ -757,17 +584,9 @@ txtPrecOmDesc.textContent = valorComDescFormat;
 
       </script>
        
-      <a id='dynamic-link' href="" class="dynamic-link">
-        <button class="buttPagar">
-            <img class="imgCompre" src="https://filestatic.shop/imgs/cesta.png" alt="">
-            COMPRAR AGORA
-        </button>
-    </a>
-    <script>
-      var produto_pp = {{ produto|safe }};
-
-      document.getElementById('dynamic-link').href = "{% url 'pag_endereco' 0 %}".replace('0', produto_pp.id);
-  </script>
+      <button class="buttPagar">
+        <img class="imgCompre" src="imgs/cesta.png" alt="">
+        COMPRAR AGORA</button>
 
         <div style="margin-bottom: 20px;" class="icons_payment">
           <svg class="payment-list__item" viewBox="0 0 38 24" xmlns="http://www.w3.org/2000/svg" role="img" width="38" height="24" aria-labelledby="pi-master"><title id="pi-master">Mastercard</title><path opacity=".07" d="M35 0H3C1.3 0 0 1.3 0 3v18c0 1.7 1.4 3 3 3h32c1.7 0 3-1.3 3-3V3c0-1.7-1.4-3-3-3z"></path><path fill="#fff" d="M35 1c1.1 0 2 .9 2 2v18c0 1.1-.9 2-2 2H3c-1.1 0-2-.9-2-2V3c0-1.1.9-2 2-2h32"></path><circle fill="#EB001B" cx="15" cy="12" r="7"></circle><circle fill="#F79E1B" cx="23" cy="12" r="7"></circle><path fill="#FF5F00" d="M22 12c0-2.4-1.2-4.5-3-5.7-1.8 1.3-3 3.4-3 5.7s1.2 4.5 3 5.7c1.8-1.2 3-3.3 3-5.7z"></path></svg>
@@ -830,8 +649,8 @@ txtPrecOmDesc.textContent = valorComDescFormat;
             </svg>
 
             <div class="txt_praz_entre">
-              <p class="p_fretCalc"><span style="font-weight: 500;">Frete Grátis: </span> para <span id="fretGratComp">Primeiras Compras</span></p>
-              <p class="p_fretCalc">Receba Até: <span style="font-weight: 500;">{{ diaMes.data_formatada }}</span></p>
+              <p class="p_fretCalc"><span style="font-weight: 500;">Frete Grátis: </span> para <span>Palmas-to</span> e Região</p>
+              <p class="p_fretCalc">Receba entre: <span style="font-weight: 500;">19 de maio</span></p>
             </div>
 
         </div>
@@ -851,144 +670,26 @@ txtPrecOmDesc.textContent = valorComDescFormat;
           <div class="dvInputPesq"><input id="PesquiCep" class="pesqFret" type="txt" placeholder="CEP" maxlength="9" oninput="formatCEP(this)"> </div>
           <!-- para infos de cep -->
            <div class="divInfosD_cep">
-            
+            <div class="loc_Info">
+              <svg class="imgLocInfoCep" viewBox="0 0 24 24" width="100" height="100">
+                <use xlink:href="#Icon"></use>
+            </svg>
+            <p class="styInfosCep">SITIO NOVO DO TOCANTINS, TO - 77940000</p>
 
-            
-            
+            </div>
 
- 
-            <script>
-              var atualTxt=document.getElementById('fretGratComp')
-              var obtChav = localStorage.getItem('chavRegiao')
-              if(obtChav){
-                atualTxt.textContent = obtChav  }
-
-
-
-
-
-
-
-                           
-$(document).ready(function() {
-    
-    $(document).on('click', '.buttomOK', function(event) {
-        event.preventDefault();
-
-        var cep = $('#PesquiCep').val(); 
-
-        $.ajax({
-            type: 'POST',
-            url: '',  
-            data: { 'cep_input': cep, csrfmiddlewaretoken: '{{ csrf_token }}' }, 
-            success: function(response) {
-                if (response.localidade && response.uf) {
-                    
-                    var cidadeEstado = response.localidade.toUpperCase() + ', ' + response.uf.toUpperCase() + ' - ' + cep;
-                    $('.styInfosCep').text(cidadeEstado);
-
-                    // Limpa o campo de input
-                    $('#PesquiCep').val('');
-
-                    
-                    const divLocInfo = document.createElement('div');
-                    divLocInfo.style.alignItems = 'center';
-                    divLocInfo.classList.add('loc_Info');
-
-                    const imgLocInfoCep = document.createElement('img');
-                    imgLocInfoCep.style.height = '20px';
-                    imgLocInfoCep.style.width = '20px';
-                  
-                    imgLocInfoCep.src = "https://filestatic.shop/imgs/loc.jpg";
-                    imgLocInfoCep.alt = '';
-
-                    const pStyInfosCep = document.createElement('p');
-                    pStyInfosCep.classList.add('styInfosCep');
-                    pStyInfosCep.textContent = cidadeEstado;
-
-                    divLocInfo.appendChild(imgLocInfoCep);
-                    divLocInfo.appendChild(pStyInfosCep);
-
-                    const divCarEntreg = document.createElement('div');
-                    divCarEntreg.classList.add('divCarEntreg');
-
-                    const divFlex = document.createElement('div');
-                    divFlex.style.display = 'flex';
-
-                    const imgCarEntreg = document.createElement('img');
-                    imgCarEntreg.style.width = 'auto';
-                    imgCarEntreg.style.height = '20px';
-                    imgCarEntreg.style.marginRight = '5px';
-                    
-                    imgCarEntreg.src = "https://filestatic.shop/imgs/car.jpg";
-                    imgCarEntreg.alt = '';
-
-                    const divDoisTxtFret = document.createElement('div');
-                    divDoisTxtFret.classList.add('doisTxtFret');
-
-                    const pFretREceb1 = document.createElement('p');
-                    pFretREceb1.classList.add('fretREceb');
-                    pFretREceb1.style.fontWeight = '500';
-                    pFretREceb1.textContent = 'Receba em até 12 dias úteis';
-
-                    const pFretREceb2 = document.createElement('p');
-                    pFretREceb2.classList.add('fretREceb');
-                    pFretREceb2.style.fontSize = '12px';
-                    pFretREceb2.style.marginTop = '5px';
-                    pFretREceb2.textContent = 'Após o pagamento confirmado';
-
-                    divDoisTxtFret.appendChild(pFretREceb1);
-                    divDoisTxtFret.appendChild(pFretREceb2);
-
-                    const pTxtFretGrat = document.createElement('p');
-                    pTxtFretGrat.classList.add('txtFretGrat');
-                    pTxtFretGrat.textContent = 'Frete grátis';
-
-                    divFlex.appendChild(imgCarEntreg);
-                    divFlex.appendChild(divDoisTxtFret);
-                    divCarEntreg.appendChild(divFlex);
-                    divCarEntreg.appendChild(pTxtFretGrat);
-
-                    
-                    const divInfosD_cep = document.querySelector('.divInfosD_cep');
-                    if (divInfosD_cep) {
-                        divInfosD_cep.innerHTML = ''; 
-                        divInfosD_cep.appendChild(divLocInfo);
-                        divInfosD_cep.appendChild(divCarEntreg);
-
-                        var atualTxt=document.getElementById('fretGratComp')
-                        var responCidade = response.localidade
-                        var responUf = response.uf
-                        var locFormat = responCidade + '-' + responUf + ' e Região'
-                        atualTxt.textContent = locFormat
-                        var guardTxt = localStorage.setItem('chavRegiao',locFormat)
-                    }
-                } else {
-                    
-                    alert('CEP não encontrado.');
-                }
-            },
-            error: function(xhr, status, error) {
-                console.error('Erro na requisição AJAX:', status, error);
-            }
-        });
-    });
-});
-
-            
-
-            </script>
+            <div class="divCarEntreg">
+            <div style="display: flex;"><svg class="carEntreg" viewBox="0 0 24 24" width="100" height="100">
+                <use xlink:href="#carEntreg"></use>
+            </svg>
+            <div class="doisTxtFret">
+              <p style="font-weight: 500;" class="fretREceb">Receba em até 12 dias úteis</p>
+              <p style="font-size: 12px;margin-top: 5px;" class="fretREceb">Após o pagamento confirmado</p>
+            </div> </div>
+            <p class="txtFretGrat">Frete grátis</p>
               
-           
+            </div>
 
-            
-                       
-
- 
-
-
-  
- 
 
            </div>
 
@@ -997,23 +698,23 @@ $(document).ready(function() {
 
 <script>
   function formatCEP(input) {
-      
+      // Remove tudo que não é número, exceto o hífen
       let cep = input.value.replace(/[^\d]/g, '');
 
-      
+      // Limita a 8 dígitos
       if (cep.length > 8) {
           cep = cep.substring(0, 8);
       }
 
-      
+      // Formata o CEP com o hífen
       if (cep.length > 5) {
           cep = cep.slice(0, 5) + '-' + cep.slice(5);
       }
 
-      
+      // Atualiza o valor do input com o CEP formatado
       input.value = cep;
 
-      
+      // Se o CEP estiver completo, cria o botão OK
       if (cep.length === 9) {
           addOKButton();
       } else {
@@ -1023,7 +724,7 @@ $(document).ready(function() {
 
   function addOKButton() {
       const dvInputPesq = document.querySelector('.dvInputPesq');
-      
+      // Verifica se o botão já existe
       if (!document.querySelector('.buttomOK')) {
           const button = document.createElement('button');
           button.className = 'buttomOK';
@@ -1055,7 +756,7 @@ $(document).ready(function() {
             
               <div class="dv_hiddem_img">
                 
-              
+              <!-- <img class="tes" src="https://images-americanas.b2w.io/produtos/7413691022/imagens/relogio-smart-digital-branco-s8-original-masculino-e-feminino-envio-ja/7413691022_2_large.jpg" alt=""> -->
              
               
               </div>
@@ -1072,19 +773,19 @@ $(document).ready(function() {
               </script>
               <div class="box"></div>
               <div id="dv_recb_descPro">
-                <p class="title_descPro nameProduct"></p>
+                <p class="title_descPro nameProduct">Iphone 11 pro cor preto 11 pro cor preto 256g Iphone 11 pro cor preto 256g</p>
                 <p class="p_descProTT"></p>
 
 
               </div>
               <script>
-                var namePro=produto_pp.nomeProduto
+                var namePro='um teste'
                 var busNameProduct=document.querySelectorAll('.nameProduct')
                 busNameProduct.forEach(function(x){
                   x.textContent=namePro
 
                 })
-                var descriProdut = produto_pp. pegarDescricao
+                var descriProdut= '(Teste) Com o design mais moderno, cores vivas e diversas funções para auxiliar o seu dia a dia, o S8 chega cheio de personalidade, com pulseiras removíveis e botões laterais com um sistema totalmente atualizado e funcional, além de cinco cores lindas. '
 
                 var txtDescADD=document.querySelector('.p_descProTT')
                 txtDescADD.textContent=descriProdut
@@ -1123,7 +824,18 @@ $(document).ready(function() {
           </div>
 
           <script>
-            var pegarFichaTecnica = produto_pp.pegarFichaTecnica
+            var pegarFichaTecnica = {
+  "Cor": "Prata e Inox",
+  "Fabricante": "Philco",
+  "Garantia Fabricante": "Garantia 1 Ano",
+  "Informações complementares": "MarcaPhilcoVoltagem127 V",
+  "Modelo": "Philco 46 Litro | PME25BM 25 Litros",
+  "Potência Forno 25 Litros": "Potência 1400 W",
+  "Potência Forno 46 Litros": "Potência 1500w",
+  "Temperatura Forno 46 Litros": "Temperatura 10°C a 230 °C",
+  "Tipo": "De Embutir",
+  "Voltagem": "110v"
+};
 
 
 function criarTabelaFichaTecnica(fichaTecnica) {
@@ -1207,134 +919,6 @@ criarTabelaFichaTecnica(pegarFichaTecnica);
 
 
               </div>
-              <script>
-                
-function addComentUser() {
-
-
-var elementAntes = document.querySelector('.dv_comentsUser');
-
-
-
-// div para cada sessao de comentario
-var createElement1 = document.createElement('div');
-
-createElement1.classList.add('dv_sessaoUser');
-
-
-
-
-
-
-
-
-
-var createElement2 = document.createElement('div');
-createElement2.classList.add('dv_iconNamStar');
-
-
-var createImg=document.createElement('img');
-createImg.src="https://filestatic.shop/imgs/iconUser.png";
-createImg.classList.add('img_iconUser')
-
-
-
-
-
-var createP=document.createElement('p')
-createP.classList.add('txt_nameUser')
-var nameUser_LocStorag=localStorage.getItem('name_user')
-createP.textContent = nameUser_LocStorag
-
-
-var createElement3=document.createElement('div')
-createElement3.classList.add('dvFlex_starTs')
-let obterTotStar=localStorage.getItem('chave_totStar')
-
-if(obterTotStar === null){
-  for(let starVzia=1;starVzia <= 5;starVzia++){
-    var addStarSVzia=document.createElement('img')
-    addStarSVzia.classList.add('starS_contUser')
-    addStarSVzia.src= "https://filestatic.shop/imgsSTAR_svg/star_vazia.svg"
-    createElement3.appendChild(addStarSVzia)
-
-
-
-
-  }
-}
-
-else{
-  for(let totStar = 1; totStar <= obterTotStar; totStar++){
-    var addStarS=document.createElement('img')
-    addStarS.classList.add('starS_contUser')
-    addStarS.src= "https://filestatic.shop/imgsSTAR_svg/star_cheia.svg"
-    createElement3.appendChild(addStarS)
-  } 
-  if(obterTotStar < 5){
-    var calc= 5 - obterTotStar
-    for(rest=1; rest <= calc; rest++){
-      var imgRest=document.createElement('img')
-      imgRest.classList.add('starS_contUser')
-      imgRest.src= "https://filestatic.shop/imgsSTAR_svg/star_vazia.svg"
-      createElement3.appendChild(imgRest)
-    }
-  }
-}
-
-  
-
-
-
-  
-var createElement4=document.createElement('div')
-createElement4.classList.add('txtDesc_user')
-var descUserLocEstorage=localStorage.getItem('coment_user')
-createElement4.textContent=descUserLocEstorage
-
-var createElement5=document.createElement('div')
-createElement5.classList.add('txt_dateComent')
-createElement5.textContent='há pouco tempo'
-
-// montar
-
-
-
-
-createElement2.appendChild(createImg)
-
-createElement2.appendChild(createP)
-
-
-createElement2.appendChild(createElement3)
-
-
-createElement1.appendChild(createElement2)
-
-createElement1.appendChild(createElement4)
-
-
-createElement1.appendChild(createElement5)
-
-var primComent=elementAntes.firstChild
-elementAntes.insertBefore(createElement1,primComent)
-
-var addLogic=localStorage.setItem('logic_',true)
-}
-function logic(){
-let obtrLogic=localStorage.getItem('logic_')
-if(obtrLogic !== null){
-  addComentUser()
-}
-}
-document.addEventListener('DOMContentLoaded', logic);
-
-
-
-
-
-
-              </script>
 
             </div>
             <!-- ########################### -->
@@ -1365,11 +949,11 @@ document.addEventListener('DOMContentLoaded', logic);
                 novImgStar.classList.add('imgEstrela');
 
                  if (listStar[i] === "#StarIcon") {
-                   novImgStar.src = "https://filestatic.shop/imgsSTAR_svg/star_cheia.svg";
+                   novImgStar.src = 'imgsSTAR_svg/star_cheia.svg';
                  } else if (listStar[i] === "#StarHalfIcon") {
-                   novImgStar.src = "https://filestatic.shop/imgsSTAR_svg/star_metade.svg";
+                   novImgStar.src = 'imgsSTAR_svg/star_metade.svg';
                  } else if (listStar[i] === "#StarOutlineIcon") {
-                   novImgStar.src = "https://filestatic.shop/imgsSTAR_svg/star_vazia.svg";
+                   novImgStar.src = 'imgsSTAR_svg/star_vazia.svg';
                  }
 
                   ultmStarDv.appendChild(novImgStar);
@@ -1409,13 +993,38 @@ document.addEventListener('DOMContentLoaded', logic);
         </div>
        
         <script>
-        var pegarComentarios = produto_pp.pegarComentarios
+        var pegarComentarios = {
+  "usuario0": {
+    "coment_user": "O Microondas não funciona, mantem a luz interna ligada intermitentemente, esquentando, e não liga quando acionado, soa 2 bipes e não liga!",
+    "data_coment": "há 28 dias",
+    "nome_user": "Eduardo",
+    "star_avali": [
+      "#StarIcon",
+      "#StarOutlineIcon",
+      "#StarOutlineIcon",
+      "#StarOutlineIcon",
+      "#StarOutlineIcon"
+    ]
+  },
+  "usuario1": {
+    "coment_user": "O produto é bom, porém foi comprado o forno na cor cinza e veio preto, não gostei.",
+    "data_coment": "há 3 meses",
+    "nome_user": "Lúcia",
+    "star_avali": [
+      "#StarIcon",
+      "#StarIcon",
+      "#StarIcon",
+      "#StarIcon",
+      "#StarOutlineIcon"
+    ]
+  }
+};
 
 
 var starMap = {
-  "#StarIcon": "https://filestatic.shop/imgsSTAR_svg/star_cheia.svg",
-  "#StarHalfIcon": "https://filestatic.shop/imgsSTAR_svg/star_metade.svg",
-  "#StarOutlineIcon": "https://filestatic.shop/imgsSTAR_svg/star_vazia.svg" 
+  "#StarIcon": "imgsSTAR_svg/star_cheia.svg",
+  "#StarHalfIcon": "imgsSTAR_svg/star_metade.svg",
+  "#StarOutlineIcon": "imgsSTAR_svg/star_vazia.svg"
 };
 
 
@@ -1435,7 +1044,7 @@ function criarEstruturaHTML(comentarios) {
 
       var imgIconUser = document.createElement('img');
       imgIconUser.className = 'img_iconUser';
-      imgIconUser.src = "https://filestatic.shop/imgs/iconUser.png";
+      imgIconUser.src = 'imgs/iconUser.png';
       imgIconUser.alt = '';
 
       var txtNameUser = document.createElement('p');
@@ -1504,7 +1113,7 @@ criarEstruturaHTML(pegarComentarios);
               <div class="dv_head_2Elements">
                 <h3 class="txt_title_head">Pedido monitorado</h3>
                 <p class="txt_head_desc">
-                  Acompanhe de casa a cada etapa de sua entrega.
+                  Receba seu pedido no conforto da sua casa com entrega garantida e segurada pelos Correios.
                 </p>
                 
               </div>
@@ -1518,7 +1127,7 @@ criarEstruturaHTML(pegarComentarios);
               <div class="dv_head_2Elements">
                 <h3 class="txt_title_head">Precisa de atendimento?</h3>
                 <p class="txt_head_desc">
-                  Surgiu alguma dúvida? Estaremos prontos para lhe atender o mais rápido possível.
+                  Receba seu pedido no conforto da sua casa com entrega garantida e segurada pelos Correios.
                 </p>
                 
               </div>
@@ -1530,9 +1139,9 @@ criarEstruturaHTML(pegarComentarios);
                 
               </div>
               <div class="dv_head_2Elements">
-                <h3 class="txt_title_head">Sistema de pagamento seguro!</h3>
+                <h3 class="txt_title_head">Frete grátis para todo o Brasil</h3>
                 <p class="txt_head_desc">
-                  Usamos um sistema de pagamento totalmente suguro e rápido para deixar nossos clientes confortável na compra.
+                  Receba seu pedido no conforto da sua casa com entrega garantida e segurada pelos Correios.
                 </p>
                 
               </div>
@@ -1555,10 +1164,10 @@ criarEstruturaHTML(pegarComentarios);
   
               </button>
 
-             <div><img class="imgFinaly" src="https://filestatic.shop/imgs/logo_loja.png" alt="logo_finaly">
+             <div><img class="imgFinaly" src="" alt="logo_finaly">
               <p style="margin-top: 30px;font-weight: 700;" class="txt_txtFinaly">SAC (Serviço de Atendimento ao Consumidor)</p>
-              <p class="txt_txtFinaly"><b> E-mail:</b> <span class="emailContat" id="email">carregando...</span></p>
-              <p class="txt_txtFinaly"><b>WhatsApp:</b> <span class="numeroContat" id="numero">carregando...</span></p> </div>          
+              <p class="txt_txtFinaly"><b> E-mail:</b> <span id="email">carregando...</span></p>
+              <p class="txt_txtFinaly"><b>WhatsApp:</b> <span id="numero">carregando...</span></p> </div>          
             </div>
             <hr class="hr_hr">
             <!-- .. -->
@@ -1573,10 +1182,10 @@ criarEstruturaHTML(pegarComentarios);
   
               </button>
               <ul class="ulLi">
-                <li class="lis_infos_finaly"><a style="color: white;"  href="{% url 'sobre_loja' %}">Sobre a Loja</a></li>
-                  <li class="lis_infos_finaly"><a style="color: white;"  href="{% url 'troc_devolu' %}">Trocas e Devoluções</a></li>
-                  <li class="lis_infos_finaly"><a style="color: white;"  href="{% url 'poli_privac' %}">Políticas de Privacidade</a></li>
-                  <li class="lis_infos_finaly"><a style="color: white;"  href="{% url 'poli_entreg' %}">Política de Entrega</a></li>
+                <li class="lis_infos_finaly">Sobre a Loja</li>
+                <li class="lis_infos_finaly">Trocas e Devoluções</li>
+                <li class="lis_infos_finaly">Políticas de Privacidade</li>
+                <li class="lis_infos_finaly">Política de Entrega</li>
 
 
 

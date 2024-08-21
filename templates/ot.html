@@ -1,132 +1,18 @@
+{% load static %}
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ produto.nome }}</title>
+    <link rel="stylesheet" href="{% static 'sty.css' %}">
+</head>
+<body>
+    <h1>Ola 2 </h1>
+<p>Você está acessando de: {{ city }}, {{ region }}, {{ country }}</p>
+   
 
-
-
-
-
-link.href = "{% url 'produto_detalhes' produto_id=" + product.id + " %}";
-
-
-function formatPrice(price) {
-    // Verifica se o preço é um número
-    if (typeof price === 'number') {
-        // Formata o número com separador de milhar e duas casas decimais
-        return price.toLocaleString('pt-BR', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-    } else if (typeof price === 'string') {
-        // Remove espaços em branco e substitui vírgulas por pontos
-        price = price.trim().replace(',', '.');
-        // Verifica se o preço é um número válido
-        if (!isNaN(parseFloat(price)) && isFinite(price)) {
-            // Formata o preço como número
-            return formatPrice(parseFloat(price));
-        } else {
-            // Se não for um número válido, retorna '0,00'
-            return '0,00';
-        }
-    } else {
-        return '0,00'; // Retorna 0,00 se não for um número válido
-    }
-}
-
-function searchProducts(query) {
-    var resultsContainer = document.querySelector(".dvPrincMostPrdts");
-    resultsContainer.innerHTML = "";
-
-    if (query === "") {
-        return;
-    }
-
-    var matches = [];
-
-    for (var key in produtos) {
-        var product = produtos[key];
-        var productName = product.nomeProduto.toLowerCase();
-        if (productName.startsWith(query.toLowerCase())) {
-            // Calcula o preço com desconto
-            var precoComDesconto = product.precoProduto ? product.precoProduto * (1 - (product.descont / 100)) : 0;
-
-            var highlightedName = productName.replace(new RegExp('^' + query, 'gi'), function(match) {
-                return '<span class="highlight">' + match + '</span>';
-            });
-
-            matches.push({ ...product, highlightedName, precoComDesconto });
-        }
-    }
-
-    if (matches.length === 0) {
-        resultsContainer.textContent = "Nenhum produto encontrado.";
-    } else {
-        matches.forEach(function(product) {
-            var resultDiv = document.createElement("div");
-            resultDiv.classList.add("sessCadMostProdut");
-
-            var link = document.createElement("a");
-            link.classList.add("linkProdut");
-
-            // aqui colocar codigo que retirou. Url
-            link.href = "{% url 'produto_detalhes' produto_id=" + product.id + " %}";
-
-            var img = document.createElement("img");
-            img.classList.add("mostIMG_produtPesq");
-            img.src = product.pegarFotos[0];
-            img.alt = "";
-
-            var divTxt = document.createElement("div");
-            divTxt.classList.add("divPesqProdut2Txt");
-
-            var pNome = document.createElement("p");
-            pNome.classList.add("mostPesqNomProdut");
-            pNome.innerHTML = product.highlightedName;
-
-            var pPreco = document.createElement("p");
-            pPreco.classList.add("mostPesqPrecProdut");
-
-            var precoFormatado = formatPrice(product.precoComDesconto);
-            pPreco.textContent = 'R$ ' + precoFormatado;
-
-            divTxt.appendChild(pNome);
-            divTxt.appendChild(pPreco);
-
-            link.appendChild(img);
-            link.appendChild(divTxt);
-            resultDiv.appendChild(link);
-
-            resultsContainer.appendChild(resultDiv);
-        });
-    }
-}
-
-document.getElementById("inputProduct").addEventListener("input", function() {
-    var searchQuery = this.value;
-    searchProducts(searchQuery);
-});
-
-
-
-<!-- de url -->
-
-from django.contrib import admin
-from django.urls import path
-from django.shortcuts import render
-import json
-
-# Função para carregar os produtos do arquivo JSON
-def carregar_produtos():
-    with open('infos.json', 'r', encoding='utf-8') as file:
-        produtos = json.load(file)
-    return produtos
-
-# Carregar os produtos ao iniciar a aplicação
-produtos = carregar_produtos()
-
-# View para exibir os detalhes do produto
-def produto_detalhes(request, produto_id):
-    # Obter o produto específico pelo ID
-    produto = next((p for p in produtos if p['id'] == produto_id), None)
-    return render(request, 'product.html', {'produto': produto, 'todos_os_produtos': json.dumps(produtos)})
-
-# Definir as URLs da aplicação
-urlpatterns = [
-    path('admin/', admin.site.urls),  # Exemplo de URL para o painel de administração
-    path('produto/<int:produto_id>/', produto_detalhes, name='produto_detalhes'),
-]
+   
+</body>
+</html>

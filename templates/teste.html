@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geolocation Example</title>
+</head>
+<body>
+    <h1>Obter Localização do Usuário</h1>
+    <button id="getLocationButton">Obter Localização</button>
+    <p id="locationData"></p>
+
+    <script>
+        document.getElementById('getLocationButton').addEventListener('click', function() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert('Geolocalização não é suportada por este navegador.');
+            }
+        });
+
+        function showPosition(position) {
+            var latitude = position.coords.latitude;
+            var longitude = position.coords.longitude;
+
+            fetch(`/get_location?latitude=${latitude}&longitude=${longitude}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.data) {
+                        document.getElementById('locationData').innerText = `Cidade: ${data.data.city}, Estado: ${data.data.region}`;
+                    } else {
+                        document.getElementById('locationData').innerText = `Erro: ${data.error}`;
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('locationData').innerText = `Erro: ${error}`;
+                });
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    alert('Usuário negou a solicitação de geolocalização.');
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert('Informação de localização não está disponível.');
+                    break;
+                case error.TIMEOUT:
+                    alert('A solicitação para obter a localização do usuário expirou.');
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert('Ocorreu um erro desconhecido.');
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
